@@ -17,7 +17,43 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@portal/components": [
+        "projects/components/src/public-api"
+        // "dist/components"
+      ],
+      "components/*": [
+        "dist/components/*"
+      ],
+      "@portal/core": [
+        "projects/core/src/public-api"
+      ],
+      "@portal/core/pages": [
+        "projects/core/src/lib/pages"
+        // "dist/core/src/lib/services"
+      ],
+      "@portal/core/services": [
+        "projects/core/src/lib/services"
+        // "dist/core/src/lib/services"
+      ],
+      "@portal/core/interceptors": [
+        "projects/core/src/lib/interceptors"
+        // "dist/core/src/lib/interceptors"
+      ],
+      "@portal/core/rest": [
+        "projects/core/src/lib/rest"
+        // "dist/core/src/lib/rest"
+      ],
+      "@portal/core/log": [
+        "projects/core/src/lib/log"
+        // "dist/core/src/lib/log"
+      ],
+      "@portal/core/models": [
+        "projects/core/src/lib/models"
+        // "dist/core/src/lib/models"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

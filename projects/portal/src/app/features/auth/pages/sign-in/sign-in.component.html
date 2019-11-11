@@ -1,0 +1,5 @@
+<form [formGroup]="presenter.authForm" (ngSubmit)="presenter.signIn()" >
+  <input formControlName="username" placeholder="Usuario">
+  <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Contraseña">
+  <button type="submit" [disabled]="presenter.authForm.invalid">Ingresar</button>
+</form>
