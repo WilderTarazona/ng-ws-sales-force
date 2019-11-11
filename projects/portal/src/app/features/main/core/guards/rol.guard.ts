@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {CanActivate, CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router} from '@angular/router';
 import { Observable } from 'rxjs';
 import {SessionService} from '@portal/core/services';
-import {UserRolEnum} from '../../../../../../../core/src/lib/constants/rol.enum';
+import {UserRolEnum} from '@portal/core/constants';
 
 @Injectable() // provide-in: se agrega cuando lo necesito en el modulo principal
 export class RolGuard implements CanActivate, CanActivateChild {

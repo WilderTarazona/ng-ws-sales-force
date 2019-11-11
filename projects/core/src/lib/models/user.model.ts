@@ -9,7 +9,7 @@ export class UserModel implements IUser {
 
   constructor(token: IToken) {
     this.userName = token.user_id || null;
-    this.role = token.rol as UserRolEnum || null;
+    this.role = token.role as UserRolEnum || null;
     this.country = token.country || null;
   }
 /*

@@ -5,6 +5,8 @@ import {InMemoryCache} from 'apollo-cache-inmemory';
 import {HttpClientModule} from '@angular/common/http';
 import {ProfileService} from './profile.service';
 import {environment} from '../../../../../environments/environment';
+import {CampaignService} from './campaign.service';
+import {OptionService} from './option.service';
 
 @NgModule({
   imports: [
@@ -12,7 +14,7 @@ import {environment} from '../../../../../environments/environment';
     ApolloModule,
     HttpLinkModule
   ],
-  providers: [ProfileService]
+  providers: [ProfileService, CampaignService, OptionService]
 })
 export class GraphqlModule {
   constructor(

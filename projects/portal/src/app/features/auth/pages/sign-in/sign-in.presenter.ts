@@ -5,6 +5,8 @@ import {SessionService} from '@portal/core/services';
 import {OauthService} from '@portal/core/rest';
 import {AuthService} from '../../core/http/auth.service';
 import {ProfileService} from '../../core/graphql/profile.service';
+import {CampaignService} from '../../core/graphql/campaign.service';
+import {OptionService} from '../../core/graphql/option.service';
 
 @Injectable()
 export class SignInPresenter {
@@ -15,7 +17,9 @@ export class SignInPresenter {
     private sessionService: SessionService,
     private oAuthService: OauthService,
     private authService: AuthService,
-    private profileService: ProfileService
+    private profileService: ProfileService,
+    private campaignService: CampaignService,
+    private optionService: OptionService
   ) {
     this.authForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -78,6 +82,7 @@ export class SignInPresenter {
       .subscribe(
         res => {
           console.log(res);
+          this.sessionService.setProfile(res);
           this.loadCampaignAndMenu();
         },
         // err => {},
@@ -86,16 +91,17 @@ export class SignInPresenter {
 
   protected loadCampaignAndMenu() {
     console.log('Loading CampaignAndMenu');
-    // const user = this.storage.getUser()
+    const profile = this.sessionService.getProfile();
     forkJoin(
-      of({}), // Campaign Service
-      of({}), // Menu Service
+      this.campaignService.getCampaign(profile), // Campaign Service
+      this.optionService.getOptions(profile) // Menu Service
     )
-      .subscribe(
-        res => {
+      .subscribe(([res1, res2]) => console.log(res1));
+      /*  res => {
+          console.log(res);
           // Redigir al PortalFFVV
         }, // res[0] = respuesta de campaign, res[1] = respuesta de menu
-        err => {}
-      );
+        // err => { console.log('Error en loadCampaignAndMenu'); }
+      );*/
   }
 }

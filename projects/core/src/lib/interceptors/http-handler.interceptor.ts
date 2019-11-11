@@ -28,6 +28,7 @@ export class HttpHandlerInterceptor implements HttpInterceptor {
     console.log('intercepting');
     const tokenOauth = this.sessionService.getOauthToken();
     const request = this.addToken(req, tokenOauth);
+    console.log(request);
     return next.handle(request).pipe(
       catchError((err: HttpErrorResponse) => {
         if (err.error instanceof ErrorEvent) {

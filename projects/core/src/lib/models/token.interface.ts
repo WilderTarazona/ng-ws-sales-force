@@ -11,6 +11,6 @@ export interface IToken {
   type: number;
   detail: IDetail;*/
   user_id: string;
-  rol: string;
+  role: string;
   country: string;
 }
