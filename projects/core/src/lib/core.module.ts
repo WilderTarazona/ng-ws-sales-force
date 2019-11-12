@@ -5,7 +5,7 @@ import {PortalInterceptorsModule} from '@portal/core/interceptors';
 import {PortalLogModule} from '@portal/core/log';
 import {PortalRestModule} from '@portal/core/rest';
 
-const MODULES = [PortalPagesModule, PortalServicesModule, PortalInterceptorsModule, PortalLogModule, PortalRestModule];
+const MODULES = [PortalServicesModule, PortalInterceptorsModule, PortalLogModule, PortalRestModule];
 
 @NgModule({
   imports: [MODULES],

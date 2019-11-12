@@ -12,6 +12,7 @@ import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
+import {PortalPagesModule} from '@portal/core/pages';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MessageService} from 'primeng/api';
     FormsModule,
     PortalCoreModule,
     ToastModule,
+    PortalPagesModule,
 
     TableModule,
     InputTextModule,

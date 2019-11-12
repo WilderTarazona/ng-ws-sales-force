@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {forkJoin} from 'rxjs';
+import {forkJoin, of} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {SessionService} from '@portal/core/services';
 import {OauthService} from '@portal/core/rest';
@@ -49,6 +49,7 @@ export class SignInPresenter {
       app: 'web',
       role: 'SE'
     };*/
+    // this.loadCampaignAndMenu();
     this.authService.signIn(this.authForm.value)
       .subscribe(res => {
         if (res.type === 200) {
@@ -72,47 +73,37 @@ export class SignInPresenter {
     this.profileService.getProfile(user) // Profile Service
       .subscribe(
         res => {
-          console.log(res);
           this.sessionService.setProfile(res);
-          this.loadCampaignAndMenu();
+          this.loadCampaign();
         }
       );
   }
 
-  protected loadCampaignAndMenu() {
-    console.log('Loading CampaignAndMenu');
+  protected loadCampaign() {
+    console.log('Loading Campaign');
     const profile = this.sessionService.getProfile();
-
-    this.campaignService.getCampaign(profile).subscribe(res => this.sessionService.setCampaign(res));
-    this.optionService.getOptions(profile).subscribe(res => this.sessionService.setOptions(res));
-    this.router.navigateByUrl('/PortalFFVV').then(r => {
-      if (r) {
-        console.log('Navigation PortalFFVV is successful!');
-      } else {
-        console.log('Navigation PortalFFVV has failed!');
-      }
-    });
-/*
-    const campaign = this.campaignService.getCampaign(profile);
-    const options = this.optionService.getOptions(profile);
-
-    forkJoin([campaign, options])
-      .subscribe(([camp, opts]) => {
-        // results[0] is our character
-        // results[1] is our character homeworld
-        console.log(camp);
-        console.log(opts);
-        this.sessionService.setCampaign(camp);
-        this.sessionService.setOptions(opts);
-    });*/
+    this.campaignService.getCampaign(profile)
+      .subscribe(res => {
+        this.sessionService.setCampaign(res);
+        this.loadOptions();
+      });
 /*
     const observable = forkJoin({
-      camp: this.campaignService.getCampaign(profile), // Campaign Service
-      opts: this.optionService.getOptions(profile) // Menu Service
+      this.campaignService.getCampaign(profile), // Campaign Service
+      this.optionService.getOptions(profile) // Menu Service
     });
-    /*observable.subscribe({
+    observable.subscribe({
       next: value => console.log(value),
       complete: () => console.log('This is how it ends!'),
-    });*/
+    }); ([camp, opts]) => {} */
+  }
+  protected loadOptions() {
+    console.log('Loading Options');
+    const profile = this.sessionService.getProfile();
+    this.optionService.getOptions(profile)
+      .subscribe(res => {
+        this.sessionService.setOptions(res);
+        this.router.navigateByUrl('/PortalFFVV');
+      });
   }
 }
