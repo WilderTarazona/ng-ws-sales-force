@@ -12,7 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     GuardsModule,
-    HttpModule
+    HttpModule,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class MainCoreModule { }

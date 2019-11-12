@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import {JwtHelperService} from '@auth0/angular-jwt';
 import {CryptoService} from './crypto.service';
-import {UserModel} from '../models/user.model';
-import {IProfile} from '../models/profile.interface';
+import {ICampaign, IOption, IProfile, UserModel} from '@portal/core/models';
 
 @Injectable()
 export class SessionService {
   private keyOauth = 'oauth_token';
   private keyUser = 'user_token';
   private KeyProfile = 'profile';
+  private KeyCampaign = 'campaign';
+  private KeyOptions = 'options';
   private jwtHelper = new JwtHelperService();
 
   constructor(
@@ -33,12 +34,26 @@ export class SessionService {
     const decodedToken = this.getDecodeToken(this.keyUser);
     return decodedToken ? new UserModel(decodedToken) : null;
   }
+  setProfile(data: string) {
+    localStorage.setItem(this.KeyProfile, this.crypto.set(JSON.stringify(data)));
+  }
   getProfile(): IProfile {
     const decrypted = this.decryptItem(this.KeyProfile);
     return JSON.parse(decrypted);
   }
-  setProfile(data: string) {
-    localStorage.setItem(this.KeyProfile, this.crypto.set(JSON.stringify(data)));
+  setCampaign(data: string) {
+    localStorage.setItem(this.KeyCampaign, this.crypto.set(JSON.stringify(data)));
+  }
+  getCampaign(): ICampaign {
+    const decrypted = this.decryptItem(this.KeyCampaign);
+    return JSON.parse(decrypted);
+  }
+  setOptions(data: string) {
+    localStorage.setItem(this.KeyOptions, this.crypto.set(JSON.stringify(data)));
+  }
+  getOptions(): IOption[] {
+    const decrypted = this.decryptItem(this.KeyOptions);
+    return JSON.parse(decrypted);
   }
 
   getDecodeToken(key: string) {

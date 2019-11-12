@@ -6,6 +6,7 @@ import { HomeGzComponent } from './pages/home-gz/home-gz.component';
 import { HomeGrComponent } from './pages/home-gr/home-gr.component';
 import { HomeDvComponent } from './pages/home-dv/home-dv.component';
 import {MainCoreModule} from './core/core.module';
+import {AppRoutingModule} from '../../app-routing.module';
 
 
 
@@ -13,6 +14,7 @@ import {MainCoreModule} from './core/core.module';
   declarations: [HomeSeComponent, MainComponent, HomeGzComponent, HomeGrComponent, HomeDvComponent],
   imports: [
     CommonModule,
+    AppRoutingModule,
     MainCoreModule
   ]
 })
