@@ -7,6 +7,7 @@ import { HomeGrComponent } from './pages/home-gr/home-gr.component';
 import { HomeDvComponent } from './pages/home-dv/home-dv.component';
 import {MainCoreModule} from './core/core.module';
 import {MainRoutingModule} from './main-routing.module';
+import {RolGuard} from './core/guards/rol.guard';
 
 @NgModule({
   declarations: [HomeSeComponent, MainComponent, HomeGzComponent, HomeGrComponent, HomeDvComponent],

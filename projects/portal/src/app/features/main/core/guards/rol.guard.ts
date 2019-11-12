@@ -23,8 +23,8 @@ export class RolGuard implements CanActivate, CanActivateChild {
   switchHome() {
     let accesss = false;
     switch (this.sessionService.getUser().role) { // sonar scanner
-      case UserRolEnum.SOCIA_EMPRESARIA: this.router.navigateByUrl('/PortalFFVV/home-se'); accesss = true; break;
-      case UserRolEnum.DIRECTOR_VENTA: this.router.navigateByUrl('/PortalFFVV/home-dv'); accesss = true; break;
+      case UserRolEnum.SOCIA_EMPRESARIA: this.router.navigateByUrl('/PortalFFVV/home-gr'); accesss = true; break;
+      case UserRolEnum.DIRECTOR_VENTA: this.router.navigateByUrl('/PortalFFVV/home-se'); accesss = true; break;
     }
     return accesss;
   }

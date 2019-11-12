@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {NotFoundComponent} from '@portal/core/pages';
+import {RolGuard} from './features/main/core/guards/rol.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'PortalFFVV',
+    // canActivate: [RolGuard],
     loadChildren: () => import('./features/main/main.module').then(m => m.MainModule)
   },
   {

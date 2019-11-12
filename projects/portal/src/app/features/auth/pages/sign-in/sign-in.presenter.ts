@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {forkJoin, of} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {SessionService} from '@portal/core/services';
 import {OauthService} from '@portal/core/rest';
