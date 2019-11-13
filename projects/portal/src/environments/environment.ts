@@ -9,7 +9,10 @@ export const environment = {
   ENDPOINTS: {
     ELASTIC_SEARCH: 'https://vpc-es-sbcentral-qas-glzecllqujsbt62uipjwpeju3q.us-east-1.es.amazonaws.com/',
     API_URL: 'https://api-qa.belcorp.biz',
-    GRAPH_PROFILE: 'sales_force/graphql'
+    GRAPH_PROFILE: 'sales_force/graphql',
+    GRAPH_KPI: 'kpis/sales_force/graphql',
+    UNETE_URL_EXTERNAL: 'http://localhost:63191/IngresoSistema/IngresoExterno/?token=',
+    UNETE_API_TOKEN: 'sales_force/token',
   },
   OAUTH: {
     USER: 'interfacesVS',

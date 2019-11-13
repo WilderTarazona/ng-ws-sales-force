@@ -56,6 +56,10 @@
       "@portal/core/constants": [
         "projects/core/src/lib/constants"
         // "dist/core/src/lib/constants"
+      ],
+      "@portal/core/utils": [
+        "projects/core/src/lib/utils"
+        // "dist/core/src/lib/constants"
       ]
     }
   },

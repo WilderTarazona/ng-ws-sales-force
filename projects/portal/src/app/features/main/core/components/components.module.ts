@@ -10,12 +10,14 @@ import { RetentionComponent } from './cards/retention/retention.component';
 import { SalesComponent } from './cards/sales/sales.component';
 import { SectionListComponent } from './section-list/section-list.component';
 import { UneteComponent } from './cards/unete/unete.component';
+import { ProfileUserComponent } from './profile/profile-user/profile-user.component';
+import { ProfileCampaignComponent } from './profile/profile-campaign/profile-campaign.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ProfileComponent, GainComponent, InspiraComponent, ReportCampaignComponent, RetentionComponent, SalesComponent, SectionListComponent, UneteComponent],
+  declarations: [HeaderComponent, FooterComponent, ProfileComponent, GainComponent, InspiraComponent, ReportCampaignComponent, RetentionComponent, SalesComponent, SectionListComponent, UneteComponent, ProfileCampaignComponent, ProfileUserComponent],
   imports: [
     CommonModule
   ],
-  exports: [HeaderComponent, FooterComponent]
+  exports: [HeaderComponent, FooterComponent, ProfileCampaignComponent, ProfileUserComponent]
 })
 export class ComponentsModule { }
