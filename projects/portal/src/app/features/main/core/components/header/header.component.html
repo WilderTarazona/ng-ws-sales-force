@@ -1,3 +1,6 @@
+<p-menubar [model]="items">
+</p-menubar>
+<!--
 <header class="Header ">
   <div class="container ui-g">
     <div class="ui-g-8 ui-sm-6 options-left">
@@ -91,111 +94,70 @@
         </a>
       </div>
 
-      <ng-template [ngIf]="roleSE" [ngIfElse]="roleGZ">
-        <div class="ui-g-5 items">
-          <div class="consultoras">
-            <a href="/kpis">Inicio</a>
-          </div>
-          <div (click)="hidden()" class="reportes">
-            <label>Reportes</label>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#fff"
-                fill-rule="evenodd"
-                d="M7.829 9.328L12 13.691l4.171-4.363a1.037 1.037 0 0 1 1.515.001 1.16 1.16 0 0 1 0 1.587L12.76 16.08c-.419.44-1.099.44-1.518 0l-4.927-5.164a1.16 1.16 0 0 1 0-1.587 1.037 1.037 0 0 1 1.515 0z"
-              />
-            </svg>
-          </div>
-          <div class="consultoras">
-            <a href="">Buscar Consultora</a>
-          </div>
-          <div class="options optionsReportes" *ngIf="show">
-            <ul>
-              <ng-template [ngIf]="isData" [ngIfElse]="loading">
-                <li *ngFor="let menuHeader of menuHeaderList">
-                  <span>{{ menuHeader.description }}</span>
-                </li>
-              </ng-template>
-              <ng-template #loading>
-                <li><span>Cobranza</span></li>
-                <li><span>IP Único</span></li>
-                <li><span>Pedidos Web</span></li>
-                <li><span>Bolsa de Pedidos</span></li>
-              </ng-template>
-            </ul>
-          </div>
+
+      <div class="ui-g-5 items">
+        <div class="consultoras">
+          <a href="/kpis">Inicio</a>
         </div>
-      </ng-template>
-      <ng-template #roleGZ>
-        <div class="ui-g-5 items">
-          <div class="consultoras">
-            <a href="/kpis">Inicio</a>
-          </div>
-          <div (click)="hidden()" class="reportes">
-            <label>Reportes</label>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#fff"
-                fill-rule="evenodd"
-                d="M7.829 9.328L12 13.691l4.171-4.363a1.037 1.037 0 0 1 1.515.001 1.16 1.16 0 0 1 0 1.587L12.76 16.08c-.419.44-1.099.44-1.518 0l-4.927-5.164a1.16 1.16 0 0 1 0-1.587 1.037 1.037 0 0 1 1.515 0z"
-              />
-            </svg>
-          </div>
-          <div (click)="hiddenTool()" class="reportes">
-            <label>Herramientas</label>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#fff"
-                fill-rule="evenodd"
-                d="M7.829 9.328L12 13.691l4.171-4.363a1.037 1.037 0 0 1 1.515.001 1.16 1.16 0 0 1 0 1.587L12.76 16.08c-.419.44-1.099.44-1.518 0l-4.927-5.164a1.16 1.16 0 0 1 0-1.587 1.037 1.037 0 0 1 1.515 0z"
-              />
-            </svg>
-          </div>
-          <div class="consultoras">
-            <a href="">Buscar Consultora</a>
-          </div>
-          <div class="options optionsReportes" *ngIf="show">
-            <ul>
-              <ng-template [ngIf]="isData" [ngIfElse]="loading">
-                <li *ngFor="let menuHeader of menuHeaderList">
-                  <span>{{ menuHeader.description }}</span>
-                </li>
-              </ng-template>
-              <ng-template #loading>
-                <li><span>Cobranza</span></li>
-                <li><span>IP Único</span></li>
-                <li><span>Pedidos Web</span></li>
-                <li><span>Bolsa de Pedidos</span></li>
-              </ng-template>
-            </ul>
-          </div>
-          <div class="options optionsReportes" *ngIf="showTool">
-            <ul>
-              <li *ngFor="let menuHeaderTool of menuHeaderTools">
-                <span>{{ menuHeaderTool.description }}</span>
+        <div (click)="hidden()" class="reportes">
+          <label>Reportes</label>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="M7.829 9.328L12 13.691l4.171-4.363a1.037 1.037 0 0 1 1.515.001 1.16 1.16 0 0 1 0 1.587L12.76 16.08c-.419.44-1.099.44-1.518 0l-4.927-5.164a1.16 1.16 0 0 1 0-1.587 1.037 1.037 0 0 1 1.515 0z"
+            />
+          </svg>
+        </div>
+        <div (click)="hiddenTool()" class="reportes">
+          <label>Herramientas</label>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="M7.829 9.328L12 13.691l4.171-4.363a1.037 1.037 0 0 1 1.515.001 1.16 1.16 0 0 1 0 1.587L12.76 16.08c-.419.44-1.099.44-1.518 0l-4.927-5.164a1.16 1.16 0 0 1 0-1.587 1.037 1.037 0 0 1 1.515 0z"
+            />
+          </svg>
+        </div>
+        <div class="consultoras">
+          <a href="">Buscar Consultora</a>
+        </div>
+        <div class="options optionsReportes" *ngIf="show">
+          <ul>
+            <ng-template [ngIf]="isData" [ngIfElse]="loading">
+              <li *ngFor="let menuHeader of menuHeaderList">
+                <span>{{ menuHeader.description }}</span>
               </li>
-            </ul>
-          </div>
-          <div class="consultoras">
-            <a href="">Consulta Crediticia</a>
-          </div>
+            </ng-template>
+            <ng-template #loading>
+              <li><span>Cobranza</span></li>
+              <li><span>IP Único</span></li>
+              <li><span>Pedidos Web</span></li>
+              <li><span>Bolsa de Pedidos</span></li>
+            </ng-template>
+          </ul>
         </div>
-      </ng-template>
+        <div class="options optionsReportes" *ngIf="showTool">
+          <ul>
+            <li *ngFor="let menuHeaderTool of menuHeaderTools">
+              <span>{{ menuHeaderTool.description }}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="consultoras">
+          <a href="">Consulta Crediticia</a>
+        </div>
+      </div>
     </div>
     <div class="ui-g-4 ui-sm-6 options-right">
       <div class="ui-g-9 notification ui-g-nopad ui-sm-12">
@@ -213,7 +175,7 @@
         </svg>
       </div>
       <div (click)="hide()" class="ui-g-3 user ui-g-nopad">
-        <img class="image-profile" src="../../../assets/user.jpg" />
+        <img class="image-profile" src="../../../../../../assets/images/user.jpg" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -236,3 +198,4 @@
     </div>
   </div>
 </header>
+-->
