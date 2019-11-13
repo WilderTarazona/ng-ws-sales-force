@@ -1,5 +1,36 @@
-<form [formGroup]="presenter.authForm" (ngSubmit)="presenter.signIn()" >
+<!-- <form [formGroup]="presenter.authForm" (ngSubmit)="presenter.signIn()" >
   <input formControlName="username" placeholder="Usuario">
   <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Contraseña">
   <button type="submit" [disabled]="presenter.authForm.invalid">Ingresar</button>
-</form>
+</form> -->
+
+<div class="ui-g container">
+    <div class="ui-g-7 logoHome">
+      <!-- <img src="../../../../../assets/illustration.jpg" alt=""> -->
+    </div>
+    <div class="ui-g-5 ui-sm-12 formHome">
+      <!-- <img src="../../../../../assets/logo.png" alt=""> -->
+      <br/>
+      <span>belcorp.biz</span>
+      <div>
+        <ng-template [ngIf]="showError">
+            <li>
+              Contraseña o identificador de usuario incorrectos. Escriba la contraseña y el identificador de usuario correctos e inténtelo de nuevo.
+            </li>
+        </ng-template>
+    </div>
+      <form action="" class="form" [formGroup]="presenter.authForm" (ngSubmit)="presenter.signIn()" >
+          <input formControlName="username" name="username" type="text" class="form-control rounded-0" text="" required placeholder="Nombre usuario">
+          <input [type]="showPassword ? 'text' : 'password'" formControlName="password" name="password"  text="" class="form-control rounded-0" required placeholder="Contraseña">
+          <button type="submit" [disabled]="presenter.authForm.invalid" class="btn">Iniciar sesión</button>
+        <br/>
+        <a href="" class="access">¿No puedes acceder a tu cuenta?</a>
+        <hr>
+        <p class="footer">
+          © Copyright Belcorp 2019. All rights reserved
+        </p>
+      </form>
+    </div>
+  </div>
+
+

@@ -13,7 +13,6 @@ export class ProfileCampaignComponent implements OnInit {
   constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
-    debugger;
     this.campaign = this.sessionService.getCampaign();
     if (this.campaign.phase === 'V') {
       this.kindofCampaign = true;

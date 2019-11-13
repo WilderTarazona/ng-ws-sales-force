@@ -10,6 +10,6 @@ import { ProfileCampaignComponent } from './profile/profile-campaign/profile-cam
   imports: [
     CommonModule
   ],
-  exports: [HeaderComponent, FooterComponent, ProfileCampaignComponent]
+  exports: [HeaderComponent, FooterComponent, ProfileCampaignComponent, ProfileUserComponent]
 })
 export class ComponentsModule { }

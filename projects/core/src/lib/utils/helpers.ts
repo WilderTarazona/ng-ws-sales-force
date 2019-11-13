@@ -1,7 +1,4 @@
-
-export class Helpers {
-
-  formatTextData(data: string): string {
+export const formatTextData = (data: string) => {
     let text = '';
     const array = data.toLowerCase().split(' ');
     array.forEach(element => {
@@ -9,6 +6,4 @@ export class Helpers {
       text = text + element + ' ';
     });
     return text;
-  }
-
-}
+};

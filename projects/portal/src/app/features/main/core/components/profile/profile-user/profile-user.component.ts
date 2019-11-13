@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from '@portal/core/services';
+import { ProfileModel } from '@portal/core/models';
+
 
 @Component({
   selector: 'app-profile-user',
@@ -7,14 +9,11 @@ import { SessionService } from '@portal/core/services';
   styleUrls: ['./profile-user.component.scss']
 })
 export class ProfileUserComponent implements OnInit {
-
+  profile: ProfileModel;
   constructor(private sessionService: SessionService) { }
 
   ngOnInit() {
-    this.userData = this.sessionService.getUser();
-    this.userData.names = this.formatTextData(this.userData.names);
-    this.userData.role = this.formatTextData(this.userData.role);
-    this.userData.level = this.formatTextData(this.userData.level);
+    this.profile = new ProfileModel(this.sessionService.getProfile());
   }
 
 
