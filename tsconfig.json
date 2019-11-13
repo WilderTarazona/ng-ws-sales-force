@@ -23,6 +23,14 @@
         "projects/components/src/public-api"
         // "dist/components"
       ],
+      "@portal/components/text": [
+        "projects/components/src/lib/atoms/text"
+        // "dist/components/src/lib/atoms/text"
+      ],
+      "@portal/components/title": [
+        "projects/components/src/lib/molecules/title"
+        // "dist/components/src/lib/atoms/title"
+      ],
       "components/*": [
         "dist/components/*"
       ],
