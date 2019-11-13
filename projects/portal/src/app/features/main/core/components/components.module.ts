@@ -13,12 +13,26 @@ import { ProfileUserComponent } from './profile/profile-user/profile-user.compon
 import { ProfileCampaignComponent } from './profile/profile-campaign/profile-campaign.component';
 import {MenubarModule} from 'primeng/menubar';
 
+const COMPONENTS = [
+  HeaderComponent,
+  FooterComponent,
+  GainComponent,
+  InspiraComponent,
+  ReportCampaignComponent,
+  RetentionComponent,
+  SalesComponent,
+  SectionListComponent,
+  UneteComponent,
+  ProfileCampaignComponent,
+  ProfileUserComponent
+];
+
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, GainComponent, InspiraComponent, ReportCampaignComponent, RetentionComponent, SalesComponent, SectionListComponent, UneteComponent, ProfileCampaignComponent, ProfileUserComponent],
+  declarations: [COMPONENTS],
   imports: [
     CommonModule,
     MenubarModule
   ],
-  exports: [HeaderComponent, FooterComponent, ProfileCampaignComponent, ProfileUserComponent]
+  exports: [COMPONENTS]
 })
 export class ComponentsModule { }
