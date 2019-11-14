@@ -27,6 +27,7 @@ export class OptionService {
             description
             application
             role
+            url
           }
         }
       }

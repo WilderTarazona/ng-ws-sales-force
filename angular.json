@@ -31,7 +31,8 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "projects/portal/src/styles.scss"
+              "projects/portal/src/styles.scss",
+              "projects/portal/src/assets/icons/icomoon/styles.css"
             ],
             "scripts": []
           },
