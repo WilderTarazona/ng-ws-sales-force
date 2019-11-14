@@ -16,9 +16,7 @@ export class HeaderComponent implements OnInit {
   sidebar = false;
   items: MenuItem[];
 
-  constructor(
-    private sessionService: SessionService
-  ) {}
+  constructor(private sessionService: SessionService) {}
 
   ngOnInit() {
     const options = this.sessionService.getOptions();

@@ -1,73 +1,35 @@
 <footer class="Footer">
-  <ng-template [ngIf]="isData" [ngIfElse]="loading">
-    <div class="Container ui-g">
-      <div class="menuFooter ui-g-4" *ngFor="let menuFooter of menuFooterList">
-        <h4 class="title">{{ menuFooter.description }}</h4>
-        <ul class="SubMenuFooter">
-          <li *ngFor="let subMenuFooter of menuFooter.sub_option">
-            <a href="{{ subMenuFooter.url }}">{{
-              subMenuFooter.description
-            }}</a>
-          </li>
-        </ul>
-      </div>
-      <div class="CopyrightFooter ui-g-12 ui-g-offset-8">
-        <p>© Copyright Belcorp {{ year }}. All rigths reserved.</p>
-      </div>
+  <div class="Container ui-g">
+    <div class="menuFooter ui-g-4" *ngFor="let item of optionsFooter">
+      <h4 class="title">{{ item.description }}</h4>
+      <ul class="SubMenuFooter">
+        <li *ngFor="let subItem of item.sub_option">
+          <a href="{{ subItem.url }}">{{ subItem.description }}</a>
+          <i *ngIf="compareTexts(subItem.description, 'facebook')" class="icon-facebook2 sf-text-fb sf-icon-18 ml-1"></i>
+          <i *ngIf="compareTexts(subItem.description, 'youtube')" class="icon-youtube sf-text-yt sf-icon-18 ml-1"></i>
+        </li>
+      </ul>
     </div>
-  </ng-template>
-  <ng-template #loading>
-    <div class="Container ui-g">
-      <div class="menuFooter ui-g-4">
-        <h4 class="title">Nuestros portales</h4>
-        <ul class="SubMenuFooter">
-          <li><a href="/kpis">Somos Belcorp</a></li>
-          <li><a href="/kpis">Únete a Belcorp</a></li>
-          <li><a href="/kpis">Belcorp Responde</a></li>
-        </ul>
-      </div>
-      <div class="menuFooter ui-g-4">
-        <h4 class="title">Nuestras Marcas</h4>
-        <ul class="SubMenuFooter">
-          <li><a href="/kpis">Ésika</a></li>
-          <li><a href="/kpis">L'Bel</a></li>
-          <li><a href="/kpis">Cyzone</a></li>
-        </ul>
-      </div>
-      <div class="menuFooter ui-g-4">
-        <h4 class="title">Síguenos</h4>
-        <ul class="SubMenuFooter">
-          <li><a href="/kpis">Facebook</a></li>
-          <li><a href="/kpis">YouTube</a></li>
-        </ul>
-      </div>
-      <div class="CopyrightFooter ui-g-12 ui-g-offset-8">
-        <p>© Copyright Belcorp 2019. All rigths reserved.</p>
-      </div>
+    <div class="CopyrightFooter ui-g-12 ui-g-offset-8">
+      <p>
+        © Copyright Belcorp {{ year }}. All rigths reserved.
+      </p>
     </div>
-  </ng-template>
+  </div>
   <div class="ui-g FooterMobile">
-    <img
-      class="logoBelcorp"
-      src="../../../assets/logo-belcorp copy 2.svg"
-      alt=""
-    />
+    <img class="logoBelcorp" src="../../../../../../assets/logo/logo-belcorp.svg" alt="" />
     <ul class="listFooter">
-      <li>
-        <span>Nuestros portales</span>
-        <img src="../../../assets/a-icon-add.svg" alt="" />
-      </li>
-      <li>
-        <span>Nuestras marcas</span>
-        <img src="../../../assets/a-icon-add.svg" alt="" />
+      <li *ngFor="let item of optionsFooter">
+        <span>{{ item.description }}</span>
+        <i class="icon-plus3"></i>
       </li>
     </ul>
     <div class="social">
-      <img class="Facebook" src="../../../assets/Bitmap.svg" alt="" />
-      <img class="Youtube" src="../../../assets/youtube.svg" alt="" />
+      <i class="icon-facebook2 sf-text-fb sf-icon-18 ml-2"></i>
+      <i class="icon-youtube sf-text-yt sf-icon-18 ml-2"></i>
     </div>
     <div class="CopyrightFooter">
-      <p>© Copyright Belcorp 2019. All rigths reserved.</p>
+      <p>© Copyright Belcorp {{ year }}. All rigths reserved.</p>
     </div>
   </div>
 </footer>
