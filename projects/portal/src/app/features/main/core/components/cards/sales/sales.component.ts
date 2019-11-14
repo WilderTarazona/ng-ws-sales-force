@@ -7,16 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesComponent implements OnInit {
 
-  text: string;
-  fontSize1: string;
+  title: string;
+  fontSize: string;
   lineWeight: string;
   color: string;
+  sale: boolean;
+  roadBright: boolean;
+  others: boolean;
+  data: boolean;
 
-  constructor() { }
+  constructor() {
+    this.data = true;
+    this.sale = false;
+    this.roadBright = true;
+    this.others = true;
+  }
 
   ngOnInit() {
-    this.text = 'ui-title hereeeee!!';
-    this.fontSize1 = '30px';
+    this.title = 'Venta y Pedidos';
+    this.fontSize = '30px';
     this.lineWeight = '17px';
     this.color = 'green';
 

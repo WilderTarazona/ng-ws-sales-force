@@ -8,6 +8,7 @@ import { TitleComponent } from './title.component';
   declarations: [TitleComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [TitleComponent]
 })
 export class UITitleModule { }

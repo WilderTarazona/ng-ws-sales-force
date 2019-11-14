@@ -12,11 +12,13 @@ import { UneteComponent } from './cards/unete/unete.component';
 import { ProfileUserComponent } from './profile/profile-user/profile-user.component';
 import { ProfileCampaignComponent } from './profile/profile-campaign/profile-campaign.component';
 import {MenubarModule} from 'primeng/menubar';
+import { ProgressBarModule } from 'primeng/progressbar';
 import { UITextModule } from '@portal/components/text';
 import { UITitleModule } from '@portal/components/title';
 import { UICardModule } from 'projects/components/src/lib/molecules/card';
 import { UICardHeaderModule } from 'projects/components/src/lib/molecules/card/card-header';
 import { UIIconModule } from 'projects/components/src/lib/atoms/icon';
+import { UIInfoModule } from 'projects/components/src/lib/molecules/info';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -36,7 +38,7 @@ const COMPONENTS = [
   declarations: [COMPONENTS],
   imports: [
     CommonModule,
-    MenubarModule, UITextModule, UITitleModule, UICardModule, UICardHeaderModule, UIIconModule
+    MenubarModule, ProgressBarModule, UITextModule, UITitleModule, UICardModule, UICardHeaderModule, UIIconModule, UIInfoModule
   ],
   exports: [COMPONENTS]
 })

@@ -8,6 +8,7 @@ import { InfoComponent } from './info.component';
   declarations: [InfoComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [InfoComponent]
 })
-export class InfoModule { }
+export class UIInfoModule { }
