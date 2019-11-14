@@ -94,17 +94,21 @@
           <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
         </ui-card-header>
         <ng-template [ngIf]="data" [ngIfElse]="loading">
-            <ui-info>
-                <ui-text text="Vas logrando" up></ui-text>
-                <div down>
-                  <ui-title title="$ 52,120 de Venta Catálogo"></ui-title>
-                  <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
-                </div>
-              </ui-info>
-              <ui-info>
-                  <ui-text text="Te faltan" up></ui-text>
-                    <ui-title title="24 Pedidos" down></ui-title>
-                </ui-info>
+          <ui-info>
+            <ui-text text="Vas logrando" up></ui-text>
+            <div down>
+              <ui-title title="$ 52,120 de Venta Catálogo"></ui-title>
+              <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
+            </div>
+          </ui-info>
+          <ui-info>
+            <ui-text text="Te faltan" up></ui-text>
+            <ui-title title="24 Pedidos" down></ui-title>
+          </ui-info>
+          <ui-progress-bar>
+            <ui-text text="Meta C09:100" [size]="size"></ui-text>
+            <ui-title text="¡Tú puedes!" ></ui-title>
+          </ui-progress-bar>
 
           Facturación CB Otros
         </ng-template>

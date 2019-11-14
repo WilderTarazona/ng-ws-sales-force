@@ -12,6 +12,7 @@ export class TextComponent implements OnInit {
   @Input() fontSize: string;
   @Input() lineWeight: string;
   @Input() color: string;
+  @Input() size: string;
   inputStyle: {};
 
   constructor() {
