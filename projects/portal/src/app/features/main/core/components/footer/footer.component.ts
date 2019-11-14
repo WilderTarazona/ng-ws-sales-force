@@ -1,22 +1,25 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import {OptionType} from '@portal/core/constants';
+import {IOption} from '@portal/core/models';
+import {SessionService} from '@portal/core/services';
 
 @Component({
-  selector: "app-footer",
-  templateUrl: "./footer.component.html",
-  styleUrls: ["./footer.component.scss"]
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  optionsFooter: IOption[];
   year = new Date().getFullYear();
-  //menuFooterList: MenuFooter[];
-  isData = false;
 
-  //constructor(private service: FooterService) {}
-  constructor() {}
+  constructor(private sessionService: SessionService) {}
 
   ngOnInit() {
-    // if (!!this.service.getMenuFooter()) {
-    //   this.menuFooterList = this.service.getMenuFooter();
-    //   this.isData = true;
-    // }
+    const options = this.sessionService.getOptions();
+    this.optionsFooter = options.filter(x => x.option_type === OptionType.FOOTER);
+  }
+
+  compareTexts(source: string, target: string) {
+    return source.toLocaleLowerCase() === target.toLocaleLowerCase();
   }
 }
