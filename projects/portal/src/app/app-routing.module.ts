@@ -16,7 +16,12 @@ const routes: Routes = [
   {
     path: 'PortalFFVV',
     // canActivate: [RolGuard],
-    loadChildren: () => import('./features/main/main.module').then(m => m.MainModule)
+    loadChildren: () => import('./features/main/main.module').then(m => m.MainModule),
+  },
+  {
+    path: 'kpis',
+    // canActivate: [RolGuard],
+    loadChildren: () => import('./features/kpis/kpis.module').then(m => m.KpisModule),
   },
   {
     path: '**', component: NotFoundComponent
