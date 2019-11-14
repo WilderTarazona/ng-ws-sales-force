@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'ui-card',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input() backGround: string;
+  inputStyle: {};
+
+  constructor() {
+    this.backGround = '#ffffff';
+  }
 
   ngOnInit() {
+    this.inputStyle = {
+      backgroundColor: this.backGround
+    };
   }
 
 }

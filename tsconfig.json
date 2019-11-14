@@ -23,6 +23,34 @@
         "projects/components/src/public-api"
         // "dist/components"
       ],
+      "@portal/components/text": [
+        "projects/components/src/lib/atoms/text"
+        // "dist/components/src/lib/atoms/text"
+      ],
+      "@portal/components/title": [
+        "projects/components/src/lib/molecules/title"
+        // "dist/components/src/lib/molecules/title"
+      ],
+      "@portal/components/card": [
+        "projects/components/src/lib/molecules/card"
+        // "dist/components/src/lib/molecules/card"
+      ],
+      "@portal/components/card-header": [
+        "projects/components/src/lib/molecules/card/card-header"
+        // "dist/components/src/lib/molecules/card/card-header"
+      ],
+      "@portal/components/icon": [
+        "projects/components/src/lib/atoms/icon"
+        // "dist/components/src/lib/atoms/icon"
+      ],
+      "@portal/components/info": [
+        "projects/components/src/lib/molecules/info"
+        // "dist/components/src/lib/molecules/info"
+      ],
+      "@portal/components/progress-bar": [
+        "projects/components/src/lib/molecules/progress-bar"
+        // "dist/components/src/lib/molecules/progress-bar"
+      ],
       "components/*": [
         "dist/components/*"
       ],

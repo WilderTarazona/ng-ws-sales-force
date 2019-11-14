@@ -12,6 +12,14 @@ import { UneteComponent } from './cards/unete/unete.component';
 import { ProfileUserComponent } from './profile/profile-user/profile-user.component';
 import { ProfileCampaignComponent } from './profile/profile-campaign/profile-campaign.component';
 import {MenubarModule} from 'primeng/menubar';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { UITextModule } from '@portal/components/text';
+import { UITitleModule } from '@portal/components/title';
+import { UICardModule } from '@portal/components/card';
+import { UICardHeaderModule } from '@portal/components/card-header';
+import { UIIconModule } from '@portal/components/icon';
+import { UIInfoModule } from '@portal/components/info';
+import { UIProgressBarModule } from '@portal/components/progress-bar';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -31,7 +39,7 @@ const COMPONENTS = [
   declarations: [COMPONENTS],
   imports: [
     CommonModule,
-    MenubarModule
+    MenubarModule, UIProgressBarModule, UITextModule, UITitleModule, UICardModule, UICardHeaderModule, UIIconModule, UIInfoModule
   ],
   exports: [COMPONENTS]
 })
