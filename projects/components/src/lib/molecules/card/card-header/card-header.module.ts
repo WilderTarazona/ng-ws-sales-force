@@ -9,4 +9,4 @@ import {CardHeaderComponent} from './card-header.component';
   ],
   exports: [CardHeaderComponent]
 })
-export class CardHeaderModule { }
+export class UICardHeaderModule { }

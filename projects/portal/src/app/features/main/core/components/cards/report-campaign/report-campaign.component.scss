@@ -1,0 +1,19 @@
+.Button{
+  background: #fff;
+  color:#000;
+  border-radius: 4px;
+  padding: 12px 40px;
+  border: none;
+  letter-spacing: 1px;
+  font-family: Lato,sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media (max-width:650px){
+  .ReportCampaign {
+    .Button{
+      display: none;
+    }
+  }
+}
