@@ -26,3 +26,21 @@ export class UserModel implements IUser {
   }
 */
 }
+
+export class UserTest {
+  public role: string;
+  public phase: string;
+  public roadBright: boolean;
+  public sale: boolean;
+
+  constructor() {
+    this.role = 'SE';
+    this.phase = 'F';
+    this.roadBright = false;
+    this.isSale();
+  }
+
+  isSale() {
+    this.sale = this.phase === 'V' ? true : false;
+  }
+}

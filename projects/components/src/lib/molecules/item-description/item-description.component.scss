@@ -1,0 +1,41 @@
+body{
+  font-family: 'Lato';
+}
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+p{
+  margin: 0px;
+}
+.listDetail{
+  background: #fff;
+  border-bottom: 1px solid #eaeaec;
+  padding: 16px 32px 16px 16px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.listDetail ul{
+  padding: 10px 0px 0px 10px;
+  border-left: 1px solid #eaeaec;
+}
+.listDetail li{
+ padding-bottom: 12px;
+ font-size: 12px;
+}
+.grayText{
+  color: #909094;
+}
+.blackText{
+  color: #000;
+}
+@media (max-width:650px){
+    .list{
+        padding: 0px 12px;
+    }
+    .listDetail{
+        display: block;
+    }
+}

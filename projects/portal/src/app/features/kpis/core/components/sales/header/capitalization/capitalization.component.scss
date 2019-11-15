@@ -1,0 +1,56 @@
+h3, h4, p{
+  margin: 0px;
+}
+.colorTextMag{
+  color:#b9007e
+}
+.colorBlue{
+  color: #2c2654;
+}
+.colorBackTip{
+  background-color: #f7f6f8;
+}
+.grayText{
+  color: #909094;
+}
+.capital{
+  padding: 20px 16px ;
+  height: 265px;
+  .headerInfo{
+    margin-bottom: 20px;
+  }
+
+  /********LISTAS***********/
+  .listContent{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+      li{
+          display: flex;
+          justify-content: space-between;
+          width: 100%; /*añadir el ancho para dar el espaciado entre elementos*/
+          margin-bottom: 16px;
+      }
+      p{
+          margin: 0px;
+      }
+      span{
+          font-weight: bold;
+      }
+  }
+  /*****************TIP*******************/
+  .tip{
+    padding: 12px;
+    display: flex;
+    border-radius: 4px;
+  }
+  .tip p{
+    font-size: 12px;
+    margin-left: 4px;
+  }
+}
+
+/**/
+.pedidosValor {
+  margin-top:24px;
+}
