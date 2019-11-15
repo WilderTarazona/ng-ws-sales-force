@@ -20,6 +20,7 @@ import { UICardHeaderModule } from '@portal/components/card-header';
 import { UIIconModule } from '@portal/components/icon';
 import { UIInfoModule } from '@portal/components/info';
 import { UIProgressBarModule } from '@portal/components/progress-bar';
+import { HeaderComponent } from '../../../kpis/core/components/sales/header';
 import { TableModule } from 'primeng/table';
 import { RoadBrightComponent } from './cards/road-bright/road-bright.component';
 

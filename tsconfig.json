@@ -51,6 +51,30 @@
         "projects/components/src/lib/molecules/progress-bar"
         // "dist/components/src/lib/molecules/progress-bar"
       ],
+      "@portal/components/filter": [
+        "projects/components/src/lib/molecules/filter"
+        // "dist/components/src/lib/molecules/filter"
+      ],
+      "@portal/components/find": [
+        "projects/components/src/lib/molecules/find"
+        // "dist/components/src/lib/molecules/find"
+      ],
+      "@portal/components/item-description": [
+        "projects/components/src/lib/molecules/item-description"
+        // "dist/components/src/lib/molecules/find"
+      ],
+      "@portal/components/item-title": [
+        "projects/components/src/lib/molecules/item-title"
+        // "dist/components/src/lib/molecules/find"
+      ],
+      "@portal/components/list": [
+        "projects/components/src/lib/molecules/list"
+        // "dist/components/src/lib/molecules/find"
+      ],
+      "@portal/components/pagination": [
+        "projects/components/src/lib/molecules/pagination"
+        // "dist/components/src/lib/molecules/find"
+      ],
       "components/*": [
         "dist/components/*"
       ],
