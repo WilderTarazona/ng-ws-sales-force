@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list.component';
+import { FindComponent } from './find.component';
 
 
 @NgModule({
-  declarations: [ListComponent],
+  declarations: [FindComponent],
   imports: [
     CommonModule
   ],
-  exports: [ListComponent]
+  exports: [FindComponent]
 })
-export class UIListModule { }
+export class UIFindModule { }

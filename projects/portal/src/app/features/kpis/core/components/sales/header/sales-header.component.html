@@ -1,0 +1,32 @@
+<div class="headerPage whiteBack">
+  <div class="leftSideContainer">
+    <div class="icon">
+      <img src="" alt="" />
+    </div>
+    <h2>Venta y Pedidos</h2>
+  </div>
+  <div class="rightSideContainer">
+    <span class="textLink">Ir a Cobranza y Ganancia</span>
+    <div class="iconHeader bodyBack">
+      <img src="" alt="" class="" />
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="ui-g-4 ui-g-nopad marginLeft">
+    <app-sales-catalog></app-sales-catalog>
+    <!-- <goal-orders-sales *ngIf="sale"></goal-orders-sales> -->
+  </div>
+  <div class="ui-g-4 ui-g-nopad marginCard">
+    <ng-template [ngIf]="sale" [ngIfElse]="billing">
+      <!-- <activity-sales></activity-sales> -->
+    </ng-template>
+    <ng-template #billing>
+      <app-sales-peg></app-sales-peg>
+    </ng-template>
+  </div>
+  <app-sales-capitalization
+    class="ui-g-4 ui-g-nopad marginRight"
+  ></app-sales-capitalization>
+</div>

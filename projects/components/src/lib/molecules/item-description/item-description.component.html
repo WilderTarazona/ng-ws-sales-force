@@ -1,16 +1,19 @@
 <div>
     <div class="listDetail">
         <ul>
-            <li class="grayText">Codigo:<span class="blackText">14520</span></li>
-            <li class="grayText">Celular: <span class="blackText">S/200.00</span></li>
+          <ng-content select="[left]"></ng-content>
+            <!-- <li class="grayText">Codigo:<span class="blackText">14520</span></li>
+            <li class="grayText">Celular: <span class="blackText">S/200.00</span></li> -->
         </ul>
         <ul>
-            <li class="grayText">Deuda Pendiente:<span class="blackText">14520</span></li>
-            <li class="grayText">Pedidos en Somos Belcorp: <span class="blackText">S/200.00</span></li>
+            <ng-content select="[center]"></ng-content>
+            <!-- <li class="grayText">Deuda Pendiente:<span class="blackText">14520</span></li>
+            <li class="grayText">Pedidos en Somos Belcorp: <span class="blackText">S/200.00</span></li> -->
         </ul>
         <ul>
-            <li class="grayText">Venta Acumulada del Periodo:<span class="blackText">14520</span></li>
-            <li class="grayText">Constancia: <span class="blackText">S/200.00</span></li>
+            <ng-content select="[right]"></ng-content>
+            <!-- <li class="grayText">Venta Acumulada del Periodo:<span class="blackText">14520</span></li>
+            <li class="grayText">Constancia: <span class="blackText">S/200.00</span></li> -->
         </ul>
     </div>
   </div>

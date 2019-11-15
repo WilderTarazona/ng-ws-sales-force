@@ -10,4 +10,4 @@ import { ItemTitleComponent } from './item-title.component';
   ],
   exports: [ItemTitleComponent]
 })
-export class ItemTitleModule { }
+export class UIItemTitleModule { }

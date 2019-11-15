@@ -15,12 +15,10 @@ import { MenubarModule } from 'primeng/menubar';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { UITextModule } from '@portal/components/text';
 import { UITitleModule } from '@portal/components/title';
-import { UICardModule } from '@portal/components/card';
-import { UICardHeaderModule } from '@portal/components/card-header';
+import { UICardModule, UICardHeaderModule } from '@portal/components/card';
 import { UIIconModule } from '@portal/components/icon';
 import { UIInfoModule } from '@portal/components/info';
 import { UIProgressBarModule } from '@portal/components/progress-bar';
-import { HeaderComponent } from '../../../kpis/core/components/sales/header';
 import { TableModule } from 'primeng/table';
 import { RoadBrightComponent } from './cards/road-bright/road-bright.component';
 
@@ -40,7 +38,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  declarations: [COMPONENTS, RoadBrightComponent],
+  declarations: [ COMPONENTS ],
   imports: [
     CommonModule,
     MenubarModule,

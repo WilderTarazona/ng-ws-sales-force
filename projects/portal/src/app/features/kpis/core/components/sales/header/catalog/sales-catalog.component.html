@@ -1,0 +1,182 @@
+<ng-template [ngIf]="roadBright" [ngIfElse]="notRoadBright">
+    <ng-template [ngIf]="sale" [ngIfElse]="billing">
+      <ui-card>
+        <div class="sellCard whiteBack ">
+          <!--<ul class="listContent">
+                    <li>
+                        <h3>Venta Catálogo</h3>
+                        <h3 class="colorTextMag">S/ 20,800</h3>
+                    </li>
+                </ul>
+                <hr>-->
+          <div class="sectionInfo">
+            <div class="orangeLightBack adviceBig">
+              <h4>Venta Catálogo</h4>
+              <h4 class="colorTextMag">$59,012</h4>
+            </div>
+            <ul class="meta">
+              <li>
+                <span>Meta C08</span>
+                <p class="colorBlue">$ 60,012</p>
+              </li>
+              <li>
+                <span>Cumplimiento</span>
+                <p class="colorBlue">80%</p>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div class="infoFacturacion">
+            <ul class="listContent pedidosValor">
+              <li>
+                <h3>Pedidos</h3>
+                <h3 class="colorTextMag">76 facturados</h3>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <ul class="listContent promedy">
+            <li>
+              <h3>Promedio por pedido</h3>
+              <h3 class="colorTextMag">$ 789.60</h3>
+            </li>
+          </ul>
+        </div>
+      </ui-card>
+    </ng-template>
+
+    <ng-template #billing>
+      <ui-card>
+        <div class="sellCard whiteBack ">
+          <div class="sectionInfo">
+            <div class="orangeLightBack adviceBig">
+              <h4>Venta Catálogo</h4>
+              <h4 class="colorTextMag">65 facturados</h4>
+            </div>
+            <ul class="meta">
+              <li>
+                <span>Meta C08</span>
+                <p class="colorBlue">$ 60,000</p>
+              </li>
+              <li>
+                <span>Cumplimiento</span>
+                <p class="colorGreen">105%</p>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div class="infoFacturacion">
+            <ul class="listContent pedidosValor">
+              <li>
+                <h3>Pedidos</h3>
+                <h3 class="colorTextMag">76 facturados</h3>
+              </li>
+              <li>
+                <p>Pedidos de Alto Valor (PAV)</p>
+                <span class="colorBlue">40 pedidos</span>
+              </li>
+              <li>
+                <p>Pedidos de Bajo Valor (PBV)</p>
+                <span class="colorBlue">70 pedidos</span>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <ul class="listContent promedy">
+            <li>
+              <h3>Promedio por pedido</h3>
+              <h3 class="colorTextMag">$ 789.60</h3>
+            </li>
+          </ul>
+        </div>
+      </ui-card>
+    </ng-template>
+  </ng-template>
+
+  <ng-template #notRoadBright>
+    <ng-template [ngIf]="sale" [ngIfElse]="billing">
+      <ui-card class="">
+        <div class="sellCard whiteBack ">
+          <ul class="listContent">
+            <li>
+              <h3>Venta Catálogo</h3>
+              <h3 class="colorTextMag">S/ 20,800</h3>
+            </li>
+          </ul>
+          <hr />
+          <div class="sectionInfo">
+            <div class="orangeLightBack adviceBig">
+              <h4>Pedidos</h4>
+              <h4 class="colorTextMag">65 facturados</h4>
+            </div>
+            <ul class="meta">
+              <li>
+                <span class="colorTextLittle">Meta C08</span>
+                <p class="colorBlue">100 pedidos</p>
+              </li>
+              <li>
+                <span class="colorTextLittle">Cumplimiento</span>
+                <p class="colorBlue">80%</p>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <ul class="listContent promedy">
+            <li>
+              <h3>Promedio por pedido</h3>
+              <h3 class="colorTextMag">S/ 320</h3>
+            </li>
+          </ul>
+        </div>
+      </ui-card>
+    </ng-template>
+
+    <ng-template #billing>
+      <ui-card>
+        <div class="sellCard whiteBack ">
+          <ul class="listContent">
+            <li>
+              <h3>Venta Catálogo</h3>
+              <h3 class="colorTextMag">S/ 20,800</h3>
+            </li>
+          </ul>
+          <hr />
+          <div class="sectionInfo">
+            <div class="orangeLightBack adviceBig">
+              <h4>Pedidos</h4>
+              <h4 class="colorTextMag">65 facturados</h4>
+            </div>
+            <ul class="meta">
+              <li>
+                <span class="colorTextLittle">Meta C08</span>
+                <p class="colorBlue">100 pedidos</p>
+              </li>
+              <li>
+                <span class="colorTextLittle">Cumplimiento</span>
+                <p class="colorBlue">80%</p>
+              </li>
+            </ul>
+          </div>
+          <div class="infoFacturacion">
+            <ul class="listContent pedidosValor">
+              <li>
+                <p>Pedidos de Alto Valor (PAV)</p>
+                <span class="colorBlue">40 pedidos</span>
+              </li>
+              <li>
+                <p>Pedidos de Bajo Valor (PBV)</p>
+                <span class="colorBlue">70 pedidos</span>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <ul class="listContent promedy">
+            <li>
+              <h3>Promedio por pedido</h3>
+              <h3 class="colorTextMag">S/ 320</h3>
+            </li>
+          </ul>
+        </div>
+      </ui-card>
+    </ng-template>
+  </ng-template>

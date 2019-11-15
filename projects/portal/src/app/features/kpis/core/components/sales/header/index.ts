@@ -1,6 +1,6 @@
-export * from './sale-catalog/sale-catalog.component';
+export * from './catalog/sales-catalog.component';
 // export * from './activity/activity.component';
-export * from './capitalization/capitalization.component';
+export * from './capitalization/sales-capitalization.component';
 // export * from './goal-orders/goal-orders.component';
-export * from './peg/peg.component';
-export * from './header.component';
+export * from './peg/sales-peg.component';
+export * from './sales-header.component';

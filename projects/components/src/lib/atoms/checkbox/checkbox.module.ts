@@ -10,4 +10,4 @@ import { CheckboxComponent } from './checkbox.component';
     CommonModule
   ]
 })
-export class CheckboxModule { }
+export class UICheckboxModule { }

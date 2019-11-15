@@ -1,28 +1,48 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FilterComponent } from './sales/filter/filter.component';
-import { SaleCatalogComponent } from './sales/header/sale-catalog/sale-catalog.component';
-import { PegComponent } from './sales/header/peg/peg.component';
-import { CapitalizationComponent } from './sales/header/capitalization/capitalization.component';
-import { HeaderComponent } from './sales/header/header.component';
-import { FindComponent } from './sales/find/find.component';
-import { PaginationComponent } from './sales/pagination/pagination.component';
-import { ListComponent } from './sales/list/list.component';
+import { SalesFilterComponent } from './sales/filter/sales-filter.component';
+import { SalesCatalogComponent } from './sales/header/catalog/sales-catalog.component';
+import { SalesPegComponent } from './sales/header/peg/sales-peg.component';
+import { SalesCapitalizationComponent } from './sales/header/capitalization/sales-capitalization.component';
+import { SalesHeaderComponent } from './sales/header/sales-header.component';
+import { SalesFindComponent } from './sales/find/sales-find.component';
+import { SalesListComponent } from './sales/list/sales-list.component';
+
+import { UICardModule } from '@portal/components/card';
+import { UIFilterModule } from '@portal/components/filter';
+import { UIPaginationModule } from '@portal/components/pagination';
+import { UICheckboxModule } from '@portal/components/checkbox';
+import { UITextModule } from '@portal/components/text';
+import { UITitleModule } from '@portal/components/title';
+import { UIItemDescriptionModule } from '@portal/components/item-description';
+import { UIItemTitleModule } from '@portal/components/item-title';
+import { UIFindModule } from '@portal/components/find';
 
 const COMPONENTS = [
-  FilterComponent,
-  SaleCatalogComponent,
-  PegComponent,
-  CapitalizationComponent,
-  HeaderComponent,
-  FindComponent,
-  PaginationComponent,
-  ListComponent
+  SalesFilterComponent,
+  SalesCatalogComponent,
+  SalesPegComponent,
+  SalesCapitalizationComponent,
+  SalesHeaderComponent,
+  SalesFindComponent,
+  SalesListComponent
 ];
 
 @NgModule({
-  declarations: [ COMPONENTS ],
-  imports: [CommonModule],
-  exports: [ COMPONENTS ]
+  declarations: [COMPONENTS],
+  imports: [
+    CommonModule,
+    UIFilterModule,
+    UICardModule,
+    UIFilterModule,
+    UIPaginationModule,
+    UICheckboxModule,
+    UITextModule,
+    UITitleModule,
+    UIItemDescriptionModule,
+    UIItemTitleModule,
+    UIFindModule
+  ],
+  exports: [COMPONENTS]
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
