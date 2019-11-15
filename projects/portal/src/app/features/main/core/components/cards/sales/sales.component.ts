@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SalesComponent implements OnInit {
 
   title: string;
-  fontSize: string;
-  lineWeight: string;
   color: string;
   sale: boolean;
   roadBright: boolean;
@@ -20,17 +18,14 @@ export class SalesComponent implements OnInit {
   constructor() {
     this.data = true;
     this.sale = false;
-    this.roadBright = true;
-    this.others = true;
+    this.roadBright = false;
+    this.others = false;
   }
 
   ngOnInit() {
     this.title = 'Venta y Pedidos';
-    this.fontSize = '30px';
-    this.lineWeight = '17px';
-    this.color = 'green';
-    this.size = 'xlg';
-
+    this.size = 'xmd';
+    this.color = '#000000';
   }
 
 }

@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReportCampaignComponent implements OnInit {
 
   title: string;
-  fontSize1: string;
-  lineWeight: string;
+  size: string;
   color: string;
   backGround: string;
 
@@ -17,9 +16,7 @@ export class ReportCampaignComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'Reporte de Campaña';
-    this.fontSize1 = '30px';
-    this.lineWeight = '17px';
-    this.color = 'green';
+    this.color = 'white';
     this.backGround = '#817BD0';
   }
 
