@@ -13,6 +13,7 @@ export class SalesCapitalizationComponent implements OnInit {
   roadBright: boolean;
   sale: boolean;
   userTest: UserTest;
+
   constructor() { }
 
   ngOnInit() {
