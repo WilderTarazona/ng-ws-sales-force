@@ -27,6 +27,12 @@ i {
   &[class*="sf-icon-plus"] {
     content: url(assets/icons/a-icon-add.svg);
   }
+  &[class*="sf-icon-arrow-down"] {
+    content: url(assets/icons/a-icon-arrow-down.svg);
+  }
+  &[class*="sf-icon-bell"] {
+    content: url(assets/icons/a-icon-bell.svg);
+  }
   &.sf-icon-18 {
     font-size: 18px;
   }

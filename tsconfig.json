@@ -129,6 +129,10 @@
       "@portal/core/utils": [
         "projects/core/src/lib/utils"
         // "dist/core/src/lib/constants"
+      ],
+      "@portal/core/guards": [
+        "projects/core/src/lib/guards"
+        // "dist/core/src/lib/guards"
       ]
     }
   },
