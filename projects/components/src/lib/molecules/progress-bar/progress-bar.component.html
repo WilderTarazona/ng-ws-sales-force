@@ -1,7 +1,11 @@
 <div class="ProgressBar">
-  <p-progressBar [value]="valueProgress"></p-progressBar>
+  <p-progressBar [value]="value"></p-progressBar>
   <div class="ProgressFooter">
-    <ng-content select="[left]"></ng-content>
-    <ng-content select="[right]"></ng-content>
+    <div class="left">
+      <ng-content select="[left]"></ng-content>
+    </div>
+    <div class="right">
+      <ng-content select="[right]"></ng-content>
+    </div>
   </div>
 </div>
