@@ -1,11 +1,4 @@
 
-@font-face {
-  font-family: Lato,sans-serif;
-  src: url("/assets/fonts/lato/Lato-Regular.ttf") format("truetype");
-}
-// *{
-//   outline: 1px solid rgba(0,255,0,0.5);
-// }
 ::placeholder {
   text-align:left;
   font-size:14px;
@@ -13,21 +6,16 @@
 .container{
   background-color: #fff;
   width: 100%;
-  margin: auto;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
+  position: fixed;
+  overflow: hidden;
 
-  .logoHome{
-    margin: 80px auto;
-    display: fixed;
+  .logo-login{
+    margin: auto;
     text-align: center;
-
   }
-  .formHome{
-    padding: 100px 80px 0;
+  .form-login{
+    padding:80px 80px 0px;
     text-align: left;
-    overflow-y: auto;
     img{
       margin-bottom: 8px;
     }
@@ -37,18 +25,16 @@
     }
     form{
       text-align: left;
-      padding: 30px 30px 30px 0px;
-
+      padding: 30px 0px;
       input{
         border: 1px solid #d3d8de;
         box-shadow: none;
         height: 24px;
         font-size: 14px;
         border-radius: 6px;
-        padding: 10px 16px;
+        padding: 20px 16px;
         margin: 0px 0px 16px;
         width: 100%;
-        font-family: Lato,sans-serif;
       }
       button{
         padding: 12px 16px;
@@ -56,8 +42,8 @@
         color: rgb(255, 255, 255);
         border: none;
         border-radius: 4px;
-        width: 109%;
-        font-family: Lato,sans-serif;
+        width: 100%;
+        font-weight: bold;
         font-size: 16px;
         margin-bottom: 20px;
         cursor: pointer;
@@ -77,7 +63,7 @@
       text-decoration: underline;
     }
   }
-  .footer{
+  .footer-login{
     text-align: center;
     color:#929ba1;
     font-size: 12px;
