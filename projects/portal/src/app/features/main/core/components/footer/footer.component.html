@@ -16,17 +16,28 @@
       </p>
     </div>
   </div>
-  <div class="ui-g FooterMobile">
-    <img class="logoBelcorp" src="../../../../../../assets/logo/logo-belcorp.svg" alt="" />
+
+  <div class="FooterMobile">
+    <img class="logoBelcorp" src="../../../../../../assets/logo/logo-belcorp.svg" alt="">
     <ul class="listFooter">
       <li *ngFor="let item of optionsFooter">
         <span>{{ item.description }}</span>
         <i class="icon-plus3"></i>
+        <!--<img src="images/a-icon-add.svg" alt="">-->
+        <div class="optionFooter">
+          <ul>
+            <li *ngFor="let subItem of item.sub_option">
+              <a href="{{ subItem.url }}">{{ subItem.description }}</a>
+            </li>
+          </ul>
+        </div>
       </li>
     </ul>
     <div class="social">
       <i class="icon-facebook2 sf-text-fb sf-icon-18 ml-2"></i>
       <i class="icon-youtube sf-text-yt sf-icon-18 ml-2"></i>
+      <!--<img class="Facebook" src="images/Bitmap.svg" alt="">
+      <img class="Youtube" src="images/youtube.svg" alt="">-->
     </div>
     <div class="CopyrightFooter">
       <p>© Copyright Belcorp {{ year }}. All rigths reserved.</p>
