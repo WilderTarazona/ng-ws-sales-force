@@ -6,19 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unete.component.scss']
 })
 export class UneteComponent implements OnInit {
-  title: string;
-  fontSize1: string;
-  lineWeight: string;
-  color: string;
 
-  constructor() { }
+  title: string;
+  color: string;
+  sale: boolean;
+  roadBright: boolean;
+  others: boolean;
+  data: boolean;
+  size: string;
+  cars: any[];
+
+  constructor() {
+    this.data = true;
+    this.sale = true;
+    this.roadBright = false;
+    this.others = false;
+    this.cars = ['uno'];
+  }
 
   ngOnInit() {
     this.title = 'Únete';
-    this.fontSize1 = '30px';
-    this.lineWeight = '17px';
-    this.color = 'green';
-
+    this.size = 'xmd';
+    this.color = '#000000';
   }
 
 }

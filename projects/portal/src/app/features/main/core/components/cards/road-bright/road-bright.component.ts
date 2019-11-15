@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-inspira',
-  templateUrl: './inspira.component.html',
-  styleUrls: ['./inspira.component.scss']
+  selector: 'app-road-bright',
+  templateUrl: './road-bright.component.html',
+  styleUrls: ['./road-bright.component.scss']
 })
-export class InspiraComponent implements OnInit {
+export class RoadBrightComponent implements OnInit {
+
   title: string;
   color: string;
   sale: boolean;
@@ -13,17 +14,20 @@ export class InspiraComponent implements OnInit {
   others: boolean;
   data: boolean;
   size: string;
+  cars: any[];
 
   constructor() {
     this.data = true;
     this.sale = true;
-    this.roadBright = true;
+    this.roadBright = false;
     this.others = false;
+    this.cars = ['uno'];
   }
 
   ngOnInit() {
-    this.title = 'Programa Inspira';
+    this.title = 'Camino Brillante';
     this.size = 'xmd';
     this.color = '#000000';
   }
+
 }

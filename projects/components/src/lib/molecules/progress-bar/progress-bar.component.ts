@@ -10,7 +10,6 @@ export class ProgressBarComponent implements OnInit {
   @Input() left: string;
   @Input() right: string;
   @Input() value: number;
-  valueProgress: number;
 
   constructor() {
     this.value = 30;
