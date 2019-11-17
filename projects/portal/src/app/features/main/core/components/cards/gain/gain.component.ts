@@ -11,6 +11,7 @@ export class GainComponent implements OnInit {
   color: string;
   sale: boolean;
   roadBright: boolean;
+  dop: boolean;
   others: boolean;
   data: boolean;
   size: string;

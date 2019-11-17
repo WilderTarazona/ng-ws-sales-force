@@ -1,35 +1,6 @@
 <ng-template [ngIf]="sale" [ngIfElse]="billing">
   <ng-template [ngIf]="roadBright" [ngIfElse]="noRoadBright">
-    <ng-template [ngIf]="others" [ngIfElse]="cl">
-      <ui-card>
-        <ui-card-header>
-          <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
-          <ui-title [title]="title" size="xmd" color="color"></ui-title>
-          <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
-        </ui-card-header>
-        <ng-template [ngIf]="data" [ngIfElse]="loading">
-          <ui-info>
-            <ui-text text="En C08 lograste" size="md" up></ui-text>
-            <ui-title
-              title="$59,012 de Venta Catálogo"
-              size="lg"
-              down
-            ></ui-title>
-          </ui-info>
-          <ui-info>
-            <ui-text text="En C09 tu meta es" size="md" up></ui-text>
-            <div down>
-              <ui-title title="100 Pedidos" size="lg"></ui-title>
-              <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
-            </div>
-          </ui-info>
-          venta CB otros
-        </ng-template>
-        <ng-template #loading>Loading...</ng-template>
-      </ui-card>
-    </ng-template>
-
-    <ng-template #cl>
+    <ng-template [ngIf]="dop" [ngIfElse]="others">
       <ui-card>
         <ui-card-header>
           <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
@@ -59,7 +30,36 @@
               <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
             </div>
           </ui-info>
-          venta CB CL
+          venta CB DOP
+        </ng-template>
+        <ng-template #loading>Loading...</ng-template>
+      </ui-card>
+    </ng-template>
+
+    <ng-template #others>
+      <ui-card>
+        <ui-card-header>
+          <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
+          <ui-title [title]="title" size="xmd" color="color"></ui-title>
+          <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
+        </ui-card-header>
+        <ng-template [ngIf]="data" [ngIfElse]="loading">
+          <ui-info>
+            <ui-text text="En C08 lograste" size="md" up></ui-text>
+            <ui-title
+              title="$59,012 de Venta Catálogo"
+              size="lg"
+              down
+            ></ui-title>
+          </ui-info>
+          <ui-info>
+            <ui-text text="En C09 tu meta es" size="md" up></ui-text>
+            <div down>
+              <ui-title title="100 Pedidos" size="lg"></ui-title>
+              <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
+            </div>
+          </ui-info>
+          venta CB otros
         </ng-template>
         <ng-template #loading>Loading...</ng-template>
       </ui-card>
@@ -98,37 +98,7 @@
 
 <ng-template #billing>
   <ng-template [ngIf]="roadBright" [ngIfElse]="noRoadBright">
-    <ng-template [ngIf]="others" [ngIfElse]="cl">
-      <ui-card>
-        <ui-card-header>
-          <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
-          <ui-title [title]="title" size="xmd" color="color"></ui-title>
-          <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
-        </ui-card-header>
-        <ng-template [ngIf]="data" [ngIfElse]="loading">
-          <ui-info>
-            <ui-text text="Vas logrando" size="md" up></ui-text>
-            <div down>
-              <ui-title title="$ 52,120 de Venta Catálogo" size="lg"></ui-title>
-              <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
-            </div>
-          </ui-info>
-          <ui-info>
-            <ui-text text="Te faltan" size="md" up></ui-text>
-            <ui-title title="24 Pedidos" size="lg" down></ui-title>
-          </ui-info>
-          <ui-progress-bar>
-            <ui-text text="Meta C09:100" size="xsm" left></ui-text>
-            <ui-title title="¡Tú puedes!" size="xsm" right></ui-title>
-          </ui-progress-bar>
-
-          Facturación CB Otros
-        </ng-template>
-        <ng-template #loading>Loading...</ng-template>
-      </ui-card>
-    </ng-template>
-
-    <ng-template #cl>
+    <ng-template [ngIf]="dop" [ngIfElse]="others">
       <ui-card>
         <ui-card-header>
           <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
@@ -153,7 +123,37 @@
               <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
             </div>
           </ui-info>
-          Facturación CB CL
+          Facturación CB DOP
+        </ng-template>
+        <ng-template #loading>Loading...</ng-template>
+      </ui-card>
+    </ng-template>
+
+    <ng-template #others>
+      <ui-card>
+        <ui-card-header>
+          <img src="assets/icons/a-icon-salesandorder.svg" alt="" iconLeft />
+          <ui-title [title]="title" size="xmd" color="color"></ui-title>
+          <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
+        </ui-card-header>
+        <ng-template [ngIf]="data" [ngIfElse]="loading">
+          <ui-info>
+            <ui-text text="Vas logrando" size="md" up></ui-text>
+            <div down>
+              <ui-title title="$ 52,120 de Venta Catálogo" size="lg"></ui-title>
+              <img src="assets/icons/a-icon-salesandorder.svg" alt="" />
+            </div>
+          </ui-info>
+          <ui-info>
+            <ui-text text="Te faltan" size="md" up></ui-text>
+            <ui-title title="24 Pedidos" size="lg" down></ui-title>
+          </ui-info>
+          <ui-progress-bar>
+            <ui-text text="Meta C09:100" size="xsm" left></ui-text>
+            <ui-title title="¡Tú puedes!" size="xsm" right></ui-title>
+          </ui-progress-bar>
+
+          Facturación CB Otros
         </ng-template>
         <ng-template #loading>Loading...</ng-template>
       </ui-card>
