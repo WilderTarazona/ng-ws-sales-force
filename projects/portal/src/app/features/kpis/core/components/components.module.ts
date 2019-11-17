@@ -17,6 +17,7 @@ import { UITitleModule } from '@portal/components/title';
 import { UIItemDescriptionModule } from '@portal/components/item-description';
 import { UIItemTitleModule } from '@portal/components/item-title';
 import { UIFindModule } from '@portal/components/find';
+import { SalesTitleComponent } from './sales/title/sales-title.component';
 
 const COMPONENTS = [
   SalesFilterComponent,
@@ -25,11 +26,12 @@ const COMPONENTS = [
   SalesCapitalizationComponent,
   SalesHeaderComponent,
   SalesFindComponent,
-  SalesListComponent
+  SalesListComponent,
+  SalesTitleComponent
 ];
 
 @NgModule({
-  declarations: [COMPONENTS],
+  declarations: [COMPONENTS, SalesTitleComponent],
   imports: [
     CommonModule,
     UIFilterModule,
