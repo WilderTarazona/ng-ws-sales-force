@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {UserTest} from '@portal/core/models';
+import { UserTest } from '@portal/core/models';
 
 @Component({
-  selector: 'app-sales-peg',
-  templateUrl: './sales-peg.component.html',
-  styleUrls: ['./sales-peg.component.scss']
+  selector: 'app-sales-goal',
+  templateUrl: './sales-goal.component.html',
+  styleUrls: ['./sales-goal.component.scss']
 })
-export class SalesPegComponent implements OnInit {
+export class SalesGoalComponent implements OnInit {
+
   role: string;
   phase: string;
   roadBright: boolean;
   sale: boolean;
   userTest: UserTest;
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit() {
     this.userTest = new UserTest();
@@ -20,7 +22,6 @@ export class SalesPegComponent implements OnInit {
     this.roadBright = this.userTest.roadBright;
     this.sale = this.userTest.sale;
     console.log('Sales-Peg, es venta :' + this.sale + ' es camino brillante :' + this.roadBright);
-
   }
 
 }

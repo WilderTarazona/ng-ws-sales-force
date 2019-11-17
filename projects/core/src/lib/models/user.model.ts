@@ -31,12 +31,14 @@ export class UserTest {
   public role: string;
   public phase: string;
   public roadBright: boolean;
+  public others: boolean;
   public sale: boolean;
 
   constructor() {
     this.role = 'SE';
-    this.phase = 'F';
+    this.phase = 'V';
     this.roadBright = false;
+    this.others = false;
     this.isSale();
   }
 

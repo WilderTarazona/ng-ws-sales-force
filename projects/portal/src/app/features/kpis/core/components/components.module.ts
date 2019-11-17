@@ -18,20 +18,24 @@ import { UIItemDescriptionModule } from '@portal/components/item-description';
 import { UIItemTitleModule } from '@portal/components/item-title';
 import { UIFindModule } from '@portal/components/find';
 import { SalesTitleComponent } from './sales/title/sales-title.component';
+import { SalesGoalComponent } from './sales/header/goal/sales-goal.component';
+import { SalesActivityComponent } from './sales/header/activity/sales-activity.component';
 
 const COMPONENTS = [
-  SalesFilterComponent,
+  SalesTitleComponent,
+  SalesHeaderComponent,
+  SalesGoalComponent,
+  SalesActivityComponent,
   SalesCatalogComponent,
   SalesPegComponent,
   SalesCapitalizationComponent,
-  SalesHeaderComponent,
+  SalesFilterComponent,
   SalesFindComponent,
   SalesListComponent,
-  SalesTitleComponent
 ];
 
 @NgModule({
-  declarations: [COMPONENTS, SalesTitleComponent],
+  declarations: [COMPONENTS, SalesTitleComponent, SalesGoalComponent, SalesActivityComponent],
   imports: [
     CommonModule,
     UIFilterModule,

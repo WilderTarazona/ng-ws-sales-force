@@ -12,15 +12,32 @@ export class SalesCapitalizationComponent implements OnInit {
   phase: string;
   roadBright: boolean;
   sale: boolean;
+  others: boolean;
   userTest: UserTest;
 
-  constructor() { }
+  capitalizationIngresos: string;
+  capitalizationReingresos: string;
+  capitalizationEgresos: string;
+
+  constructor() {}
 
   ngOnInit() {
     this.userTest = new UserTest();
     this.role = this.userTest.role;
     this.roadBright = this.userTest.roadBright;
+    this.others = this.userTest.others;
     this.sale = this.userTest.sale;
+    console.log('Sales-Capitalization, es venta :' + this.sale + ' es camino brillante :' + this.roadBright);
+
+    if (this.sale) {
+      this.capitalizationIngresos = '10 Consultoras';
+      this.capitalizationReingresos = '5 Consultoras';
+      this.capitalizationEgresos = '3 Consultoras';
+    } else {
+      this.capitalizationIngresos = '10 Consultoras';
+      this.capitalizationReingresos = '5 Consultoras';
+      this.capitalizationEgresos = '-';
+    }
   }
 
 }
