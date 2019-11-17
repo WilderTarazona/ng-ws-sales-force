@@ -25,6 +25,8 @@ import { RetentionFindComponent } from './retention/find/retention-find.componen
 import { RetentionListComponent } from './retention/list/retention-list.component';
 import { RetentionTitleComponent } from './retention/title/retention-title.component';
 import { RetentionHeaderComponent } from './retention/header/retention-header.component';
+import { RetentionConsultantsComponent } from './retention/header/consultants/retention-consultants.component';
+import { RetentionRetentionsComponent } from './retention/header/retentions/retention-retentions.component';
 
 const COMPONENTS = [
   SalesTitleComponent,
@@ -41,7 +43,9 @@ const COMPONENTS = [
   RetentionFindComponent,
   RetentionListComponent,
   RetentionTitleComponent,
-  RetentionHeaderComponent
+  RetentionHeaderComponent,
+  RetentionConsultantsComponent,
+  RetentionRetentionsComponent
 ];
 
 @NgModule({
