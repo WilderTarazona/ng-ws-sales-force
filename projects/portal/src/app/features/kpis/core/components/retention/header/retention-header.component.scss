@@ -1,0 +1,26 @@
+.CycleNews{
+  display: flex;
+  justify-content: space-between;
+}
+.firstCard{
+  padding: 24px 20px;
+  border-radius: 4px;
+}
+.advice{
+  padding: 16px 80px;
+}
+.advice p{
+  font-weight: bold;
+}
+.disclaimer{
+  font-size: 12px;
+  margin: 12px auto;
+}
+.secondCard{
+  border-radius: 4px;
+  padding: 24px 20px;
+  width: 70%;
+}
+.divided{
+  margin: 0px 16px;
+}

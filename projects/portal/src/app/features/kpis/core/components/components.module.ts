@@ -20,6 +20,11 @@ import { UIFindModule } from '@portal/components/find';
 import { SalesTitleComponent } from './sales/title/sales-title.component';
 import { SalesGoalComponent } from './sales/header/goal/sales-goal.component';
 import { SalesActivityComponent } from './sales/header/activity/sales-activity.component';
+import { RetentionFilterComponent } from './retention/filter/retention-filter.component';
+import { RetentionFindComponent } from './retention/find/retention-find.component';
+import { RetentionListComponent } from './retention/list/retention-list.component';
+import { RetentionTitleComponent } from './retention/title/retention-title.component';
+import { RetentionHeaderComponent } from './retention/header/retention-header.component';
 
 const COMPONENTS = [
   SalesTitleComponent,
@@ -32,10 +37,15 @@ const COMPONENTS = [
   SalesFilterComponent,
   SalesFindComponent,
   SalesListComponent,
+  RetentionFilterComponent,
+  RetentionFindComponent,
+  RetentionListComponent,
+  RetentionTitleComponent,
+  RetentionHeaderComponent
 ];
 
 @NgModule({
-  declarations: [COMPONENTS, SalesTitleComponent, SalesGoalComponent, SalesActivityComponent],
+  declarations: [COMPONENTS],
   imports: [
     CommonModule,
     UIFilterModule,

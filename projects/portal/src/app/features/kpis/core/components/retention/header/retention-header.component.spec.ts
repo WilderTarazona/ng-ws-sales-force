@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RetentionComponent } from './retention.component';
+import { RetentionHeaderComponent } from './retention-header.component';
 
-describe('RetentionComponent', () => {
-  let component: RetentionComponent;
-  let fixture: ComponentFixture<RetentionComponent>;
+describe('RetentionHeaderComponent', () => {
+  let component: RetentionHeaderComponent;
+  let fixture: ComponentFixture<RetentionHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RetentionComponent ]
+      declarations: [ RetentionHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RetentionComponent);
+    fixture = TestBed.createComponent(RetentionHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
