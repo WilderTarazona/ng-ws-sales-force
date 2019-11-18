@@ -1,0 +1,84 @@
+.gain{
+  margin: 0px 16px;
+  width: 72%;
+  padding: 20px 16px;
+  display: flex;
+}
+.divided{
+  margin: 0px 16px;
+}
+.gain .leftSideContainer, .gain .rightSideContainer{
+  width: 50%;
+}
+.whiteBack{
+  background-color: #fff;
+}
+.headerPage .leftSideContainer, .headerPage .rightSideContainer{
+  display: flex;
+  align-items: center;
+}
+.gain .leftSideContainer, .gain .rightSideContainer{
+  width: 50%;
+}
+.headerInfo{
+    margin-bottom: 20px;
+}
+.colorTextMag{
+  color: #b9007e;
+}
+.listContent{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.listContent li{
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /*añadir el ancho para dar el espaciado entre elementos*/
+  margin-bottom: 16px;
+}
+.listContent p{
+  margin: 0px;
+}
+.listContent span{
+  font-weight: bold;
+}
+.colorBlue{
+  color: #2c2654;
+}
+.divided{
+  margin: 0px 16px;
+}
+.headerPage .leftSideContainer, .headerPage .rightSideContainer{
+  display: flex;
+  align-items: center;
+}
+.gain .leftSideContainer, .gain .rightSideContainer{
+  width: 50%;
+}
+.headerInfo{
+  margin-bottom: 20px;
+}
+.colorGreen{
+  color:#38be62;
+}
+.listContent{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.listContent li{
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /*añadir el ancho para dar el espaciado entre elementos*/
+  margin-bottom: 16px;
+}
+.listContent p{
+  margin: 0px;
+}
+.listContent span{
+  font-weight: bold;
+}
+.colorBlue{
+  color: #2c2654;
+}

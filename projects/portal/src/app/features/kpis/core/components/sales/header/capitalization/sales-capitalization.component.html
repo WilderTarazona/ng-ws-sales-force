@@ -2,25 +2,25 @@
     <div class="capital whiteBack">
       <div class="headerInfo">
         <h3>Capitalización</h3>
-        <h4 class="colorTextMag">Total: <span>12</span></h4>
+        <h4 class="colorTextMag" *ngIf="sale">Total: <span>12</span></h4>
       </div>
       <ul class="listContent">
         <li>
           <p>Ingresos</p>
-          <span class="colorBlue">100</span>
+          <span class="colorBlue">{{ capitalizationIngresos }}</span>
         </li>
         <li>
           <p>Reingresos</p>
-          <span class="colorBlue">12</span>
+          <span class="colorBlue">{{ capitalizationReingresos }}</span>
         </li>
         <li>
           <p>Egresos</p>
-          <span class="colorBlue">12</span>
+          <span class="colorBlue">{{ capitalizationEgresos }}</span>
         </li>
       </ul>
       <div class="tip colorBackTip">
         <div>
-          <img src="../../../../../../../../assets/a-icon-observation.svg" alt="">
+          <img src="../../../../../../../../assets/icons/a-icon-observation.jpg" alt="">
         </div>
         <div>
           <p class="grayText">

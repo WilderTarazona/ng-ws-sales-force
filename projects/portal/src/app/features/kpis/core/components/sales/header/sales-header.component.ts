@@ -11,6 +11,7 @@ export class SalesHeaderComponent implements OnInit {
   role: string;
   phase: string;
   roadBright: boolean;
+  dop: boolean;
   sale: boolean;
   userTest: UserTest;
   constructor() { }

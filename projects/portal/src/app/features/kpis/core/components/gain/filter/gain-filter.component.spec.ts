@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GainComponent } from './gain.component';
+import { GainFilterComponent } from './gain-filter.component';
 
-describe('GainComponent', () => {
-  let component: GainComponent;
-  let fixture: ComponentFixture<GainComponent>;
+describe('GainFilterComponent', () => {
+  let component: GainFilterComponent;
+  let fixture: ComponentFixture<GainFilterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GainComponent ]
+      declarations: [ GainFilterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GainComponent);
+    fixture = TestBed.createComponent(GainFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

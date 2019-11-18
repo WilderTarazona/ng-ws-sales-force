@@ -19,6 +19,7 @@ export class SalesPegComponent implements OnInit {
     this.role = this.userTest.role;
     this.roadBright = this.userTest.roadBright;
     this.sale = this.userTest.sale;
+    console.log('Sales-Peg, es venta :' + this.sale + ' es camino brillante :' + this.roadBright);
 
   }
 
