@@ -1,0 +1,43 @@
+.sellCard{
+  padding:20px 16px;
+  border-radius: 4px;
+  width: 370px;
+  height: fit-content;
+}
+.listContent{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.listContent li{
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /*añadir el ancho para dar el espaciado entre elementos*/
+  margin-bottom: 16px;
+}
+.listContent p{
+  margin: 0px;
+}
+.listContent span{
+  font-weight: bold;
+}
+.promedy li{
+  margin-bottom: 0px;
+}
+.colorTextMag{
+  color: #b9007e;
+}
+.tip{
+  padding: 12px;
+  display: flex;
+}
+.tip p{
+  font-size: 12px;
+  margin-left: 4px;
+}
+.colorBackTip{
+  background-color: #f7f6f8;
+}
+.grayText{
+  color: #909094;
+}

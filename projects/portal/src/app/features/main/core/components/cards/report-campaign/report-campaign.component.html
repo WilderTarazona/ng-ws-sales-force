@@ -1,12 +1,12 @@
-<ui-card [backGround]="backGround">
+<ui-card [backGround]='backGround'>
   <ui-card-header>
-    <img src="assets/icons/a-icon-ganancia.svg" alt="" iconLeft>
-    <ui-title [title]="title"></ui-title>
-    <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight>
+    <img src='assets/icons/a-icon-ganancia.svg' alt='' iconLeft>
+    <ui-title [title]='title' size="xmd" [color]="color"></ui-title>
+    <img src='assets/icons/a-icon-arrow-right.svg' alt='' iconRight>
   </ui-card-header>
   <ui-info>
-    <ui-title title="¡Prepararse es clave!" up></ui-title>
-    <ui-text text="Ingresa para ver los datos de la sección." down></ui-text>
+    <ui-title title='¡Prepararse es clave!' size="md" [color]="color" up></ui-title>
+    <ui-text text='Ingresa para ver los datos de la sección.' size="md" [color]="color" down></ui-text>
   </ui-info>
-  <button label="Click" class="Button">Ingresar</button>
+  <button label='Click' class='Button'>Ingresar</button>
 </ui-card>

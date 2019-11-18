@@ -10,20 +10,30 @@ import { environment } from 'projects/portal/src/environments/environment';
   styleUrls: ['./unete.component.scss']
 })
 export class UneteComponent implements OnInit {
+
   title: string;
-  fontSize1: string;
-  lineWeight: string;
   color: string;
   user: ProfileModel;
+  sale: boolean;
+  roadBright: boolean;
+  others: boolean;
+  data: boolean;
+  size: string;
+  cars: any[];
 
   constructor(private sessionService: SessionService,  private uneteService: UneteService) { }
+  constructor() {
+    this.data = true;
+    this.sale = true;
+    this.roadBright = false;
+    this.others = false;
+    this.cars = ['uno'];
+  }
 
   ngOnInit() {
     this.title = 'Únete';
-    this.fontSize1 = '30px';
-    this.lineWeight = '17px';
-    this.color = 'green';
-
+    this.size = 'xmd';
+    this.color = '#000000';
   }
 
   getDetail() {

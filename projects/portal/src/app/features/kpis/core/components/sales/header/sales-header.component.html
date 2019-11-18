@@ -1,0 +1,17 @@
+<div>
+  <div class="ui-g-4 ui-g-nopad marginLeft">
+    <app-sales-catalog></app-sales-catalog>
+    <app-sales-goal *ngIf="sale"></app-sales-goal>
+  </div>
+  <div class="ui-g-4 ui-g-nopad marginCard">
+    <ng-template [ngIf]="sale" [ngIfElse]="billing">
+      <app-sales-activity></app-sales-activity>
+    </ng-template>
+    <ng-template #billing>
+      <app-sales-peg></app-sales-peg>
+    </ng-template>
+  </div>
+  <app-sales-capitalization
+    class="ui-g-4 ui-g-nopad marginRight"
+  ></app-sales-capitalization>
+</div>

@@ -7,21 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
   @Input() title: string;
-  @Input() fontSize: string;
-  @Input() lineWeight: string;
+  @Input() size: string;
   @Input() color: string;
   inputStyle: {};
 
   constructor() {
-    this.fontSize = '18px';
-    this.lineWeight = '22px';
+    this.size = 'md';
     this.color = '#2C2654';
   }
 
   ngOnInit() {
     this.inputStyle = {
-      fontSize: this.fontSize,
-      lineWeight: this.lineWeight,
       color: this.color
     };
   }

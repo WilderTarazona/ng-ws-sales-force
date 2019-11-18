@@ -8,6 +8,7 @@ import {CampaignService} from '../../core/graphql/campaign.service';
 import {OptionService} from '../../core/graphql/option.service';
 import {Router} from '@angular/router';
 import * as jwt_decode from 'jwt-decode';
+import {UserRolEnum} from '@portal/core/constants';
 
 
 @Injectable()
@@ -50,7 +51,6 @@ export class SignInPresenter {
       app: 'web',
       role: 'SE'
     };*/
-    // this.loadCampaignAndMenu();
     this.authService.signIn(this.authForm.value)
       .subscribe(res => {
         if (res.type === 200) {
@@ -104,7 +104,7 @@ export class SignInPresenter {
     this.optionService.getOptions(profile)
       .subscribe(res => {
         this.sessionService.setOptions(res);
-        this.router.navigateByUrl('/PortalFFVV');
+        this.router.navigateByUrl(this.homeNavigationbyRole());
       });
   }
 
@@ -114,5 +114,13 @@ export class SignInPresenter {
     const detail = new Detail(token, '', decoded.CodigoConsultora, 'SE', decoded.CodigoISO);
     const sessionModel = new SessionModel('User valid', '200', detail);
     this.authService.saveLoginData(sessionModel);
+  protected homeNavigationbyRole() {
+    let navigation = ''; // URL no autorizado
+    const role = this.sessionService.getUser().role;
+    switch (role) { // sonar scanner
+      case UserRolEnum.SOCIA_EMPRESARIA: navigation = '/PortalFFVV/home-se'; break;
+      case UserRolEnum.DIRECTOR_VENTA: navigation = '/PortalFFVV/home-gr'; break;
+    }
+    return navigation;
   }
 }

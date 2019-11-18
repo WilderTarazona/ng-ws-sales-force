@@ -7,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InspiraComponent implements OnInit {
   title: string;
-  fontSize1: string;
-  lineWeight: string;
   color: string;
+  sale: boolean;
+  roadBright: boolean;
+  others: boolean;
+  data: boolean;
+  size: string;
 
-  constructor() { }
+  constructor() {
+    this.data = true;
+    this.sale = true;
+    this.roadBright = true;
+    this.others = false;
+  }
 
   ngOnInit() {
     this.title = 'Programa Inspira';
-    this.fontSize1 = '30px';
-    this.lineWeight = '17px';
-    this.color = 'green';
-
+    this.size = 'xmd';
+    this.color = '#000000';
   }
 }

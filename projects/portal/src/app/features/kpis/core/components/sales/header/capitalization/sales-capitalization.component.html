@@ -1,0 +1,33 @@
+<ui-card>
+    <div class="capital whiteBack">
+      <div class="headerInfo">
+        <h3>Capitalización</h3>
+        <h4 class="colorTextMag" *ngIf="sale">Total: <span>12</span></h4>
+      </div>
+      <ul class="listContent">
+        <li>
+          <p>Ingresos</p>
+          <span class="colorBlue">{{ capitalizationIngresos }}</span>
+        </li>
+        <li>
+          <p>Reingresos</p>
+          <span class="colorBlue">{{ capitalizationReingresos }}</span>
+        </li>
+        <li>
+          <p>Egresos</p>
+          <span class="colorBlue">{{ capitalizationEgresos }}</span>
+        </li>
+      </ul>
+      <div class="tip colorBackTip">
+        <div>
+          <img src="../../../../../../../../assets/icons/a-icon-observation.jpg" alt="">
+        </div>
+        <div>
+          <p class="grayText">
+            Recuerda que tu capitalización se calcula en base a: <br />
+            Ingresos + Reingresos - Egresos
+          </p>
+        </div>
+      </div>
+    </div>
+  </ui-card>

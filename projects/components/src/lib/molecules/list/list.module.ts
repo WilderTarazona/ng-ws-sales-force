@@ -10,4 +10,4 @@ import { ListComponent } from './list.component';
   ],
   exports: [ListComponent]
 })
-export class ListModule { }
+export class UIListModule { }

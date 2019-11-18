@@ -10,4 +10,4 @@ import { ItemDescriptionComponent } from './item-description.component';
   ],
   exports: [ItemDescriptionComponent]
 })
-export class ItemDescriptionModule { }
+export class UIItemDescriptionModule { }

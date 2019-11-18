@@ -5,7 +5,8 @@
   font-size: 12px;
   bottom: 0;
   margin-top: 48px;
-    .Container{
+
+  .Container{
       max-width: 1170px;
       margin: 0 auto;
       margin-top:40px;
@@ -34,43 +35,50 @@
     }
 
   .FooterMobile{
-    display: none;
     padding: 16px 0px;
-    .logoBelcorp{
-      padding: 0px 20px;
-    }
-    .CopyrightFooter {
-      text-align: end;
-      font-size: 10px;
-      color: #000;
-      margin-top: 20px;
-      padding: 0px 20px;
-    }
-    .listFooter{
-      padding: 0px;
-      list-style: none;
-      li{
-        padding: 16px 20px 16px 20px;
-        border-bottom: 1px solid #eaeaec;
-        display: flex;
-        justify-content: space-between;
-        color: #454549;
-        font-weight: bold;
-        font-size: 14px;
-      }
-    }
-    .social{
-      text-align: right;
-      padding: 0px 20px;
-      .Facebook{
-        margin-right: 22px;
-      }
-    }
+    font-family: 'Lato';
+  }
+  .logoBelcorp{
+    padding: 0px 20px;
+  }
+  .CopyrightFooter {
+    text-align: end;
+    font-size: 10px;
+    color: #000;
+    margin-top: 20px;
+    padding: 0px 20px;
+  }
+  .listFooter{
+    padding: 0px;
+    list-style: none;
+  }
+  .listFooter li{
+    padding: 16px 20px;
+    border-bottom: 1px solid #eaeaec;
+    justify-content: space-between;
+    color: #454549;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .listFooter li:last-child{
+    border-bottom: none;
+  }
+  .listFooter li i {
+    float: right;
+  }
+  .social{
+    text-align: right;
+    padding: 0px 20px;
+  }
+  .Facebook{
+    margin-right: 22px;
+  }
+  .optionFooter{
+    padding: 16px 0px;
   }
 }
 
-@media (max-width:650px){
-
+@media (max-width:650px) {
   .Footer{
     .FooterMobile{
       display: block

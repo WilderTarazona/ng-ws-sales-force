@@ -1,0 +1,35 @@
+<!-- <p>list works!</p> -->
+<div>
+  <ui-item-title>
+    <div class="textTitle">
+      <div class="circlePoint pinkBack"></div>
+      <span class="colorPink">NUEVA 3D3</span>
+    </div>
+    <p>Angelica Jessica de la Barra Mori</p>
+  </ui-item-title>
+  <ui-item-description>
+    <ul>
+      <ng-content select="[left]"></ng-content>
+      <li class="grayText">Codigo:<span class="blackText">14520</span></li>
+      <li class="grayText">Celular: <span class="blackText">S/200.00</span></li>
+    </ul>
+    <ul>
+      <ng-content select="[center]"></ng-content>
+      <li class="grayText">
+        Deuda Pendiente:<span class="blackText">14520</span>
+      </li>
+      <li class="grayText">
+        Pedidos en Somos Belcorp: <span class="blackText">S/200.00</span>
+      </li>
+    </ul>
+    <ul>
+      <ng-content select="[right]"></ng-content>
+      <li class="grayText">
+        Venta Acumulada del Periodo:<span class="blackText">14520</span>
+      </li>
+      <li class="grayText">
+        Constancia: <span class="blackText">S/200.00</span>
+      </li>
+    </ul>
+  </ui-item-description>
+</div>

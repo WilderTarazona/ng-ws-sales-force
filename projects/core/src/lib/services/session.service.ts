@@ -7,9 +7,9 @@ import {ICampaign, IOption, IProfile, UserModel} from '@portal/core/models';
 export class SessionService {
   private keyOauth = 'oauth_token';
   private keyUser = 'user_token';
-  private KeyProfile = 'profile';
-  private KeyCampaign = 'campaign';
-  private KeyOptions = 'options';
+  private keyProfile = 'profile';
+  private keyCampaign = 'campaign';
+  private keyOptions = 'options';
   private jwtHelper = new JwtHelperService();
 
   constructor(
@@ -35,24 +35,24 @@ export class SessionService {
     return decodedToken ? new UserModel(decodedToken) : null;
   }
   setProfile(data: string) {
-    localStorage.setItem(this.KeyProfile, this.crypto.set(JSON.stringify(data)));
+    localStorage.setItem(this.keyProfile, this.crypto.set(JSON.stringify(data)));
   }
   getProfile(): IProfile {
-    const decrypted = this.decryptItem(this.KeyProfile);
+    const decrypted = this.decryptItem(this.keyProfile);
     return JSON.parse(decrypted);
   }
   setCampaign(data: string) {
-    localStorage.setItem(this.KeyCampaign, this.crypto.set(JSON.stringify(data)));
+    localStorage.setItem(this.keyCampaign, this.crypto.set(JSON.stringify(data)));
   }
   getCampaign(): ICampaign {
-    const decrypted = this.decryptItem(this.KeyCampaign);
+    const decrypted = this.decryptItem(this.keyCampaign);
     return JSON.parse(decrypted);
   }
   setOptions(data: string) {
-    localStorage.setItem(this.KeyOptions, this.crypto.set(JSON.stringify(data)));
+    localStorage.setItem(this.keyOptions, this.crypto.set(JSON.stringify(data)));
   }
   getOptions(): IOption[] {
-    const decrypted = this.decryptItem(this.KeyOptions);
+    const decrypted = this.decryptItem(this.keyOptions);
     return JSON.parse(decrypted);
   }
 
@@ -73,6 +73,13 @@ export class SessionService {
   }
   clearStorage() {
     localStorage.clear();
+  }
+  isAuthenticated() {
+    return !localStorage.getItem(this.keyUser) &&
+      !localStorage.getItem(this.keyOauth) &&
+      !localStorage.getItem(this.keyProfile) &&
+      !localStorage.getItem(this.keyCampaign) &&
+      !localStorage.getItem(this.keyOptions);
   }
 
   protected validateJwt(token) {

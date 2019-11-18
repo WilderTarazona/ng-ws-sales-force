@@ -10,4 +10,4 @@ import { FilterComponent } from './filter.component';
   ],
   exports: [FilterComponent]
 })
-export class FilterModule { }
+export class UIFilterModule { }
