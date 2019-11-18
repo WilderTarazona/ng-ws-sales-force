@@ -5,13 +5,15 @@
         <img src="../../../../../../assets/logo/logo-white.svg" alt="">
       </div>
       <ul class="menuBar">
-        <li *ngFor="let menu of optionsHeader">
+        <li *ngFor="let menu of optionsHeader" (click)="toggleMenu()">
           <span>{{ menu.description }}</span>
-          <i class="icon-arrow-down12"></i>
-          <!--<i class="sf-icon-arrow-down"></i>-->
-          <ul *ngFor="let subMenu of menu.sub_option" class="options">
-            <li><span>{{ subMenu.description }}</span></li>
-          </ul>
+          <ng-container *ngIf="haveData(menu.sub_option)">
+            <i class="icon-arrow-down12"></i>
+            <!--<i class="sf-icon-arrow-down"></i>-->
+            <ul class="options" *ngIf="showMenu">
+              <li *ngFor="let subMenu of menu.sub_option"><span>{{ subMenu.description }}</span></li>
+            </ul>
+          </ng-container>
         </li>
       </ul>
     </div>
@@ -26,9 +28,7 @@
         <i class="sf-icon-bell"></i>
       </div>
       <div class="profile">
-        <div class="avatar">
-          <img src="" alt="">
-        </div>
+        <div class="avatar"></div>
         <img src="../../../../../../assets/icons/a-icon-arrow-down.svg" alt="">
       </div>
     </div>

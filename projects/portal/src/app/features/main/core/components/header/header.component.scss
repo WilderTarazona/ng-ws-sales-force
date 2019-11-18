@@ -44,7 +44,7 @@ nav .profile{
 nav .avatar{
   width: 32px;
   height: 32px;
-  background: url(/images/avatar.png);
+  background: url('../../../../../../assets/images/avatar.png');
   border-radius: 100%;
   margin-right: 8px;
 }
@@ -75,7 +75,8 @@ nav .menuBar{
   position: relative;
 }
 .options{
-  position:absolute;
+  /*display: none;*/
+  position: absolute;
   top: 60px;
   margin-right: 100px;
   background-color: #fff;
@@ -92,9 +93,6 @@ nav .menuBar{
   font-weight: normal;
   cursor: pointer;
   position: relative;
-}
-.options{
-  display: none;
 }
 @media (max-width: 650px) {
   .Header {

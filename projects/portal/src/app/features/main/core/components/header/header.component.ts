@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SessionService} from '@portal/core/services';
 import {OptionType} from '@portal/core/constants';
-import {IOption} from '@portal/core/models';
+import {IOption, ISubOption} from '@portal/core/models';
 import {MenuItem} from 'primeng/api';
 
 @Component({
@@ -11,18 +11,19 @@ import {MenuItem} from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   optionsHeader: IOption[];
-  show = false;
-  isData = false;
-  sidebar = false;
-  items: MenuItem[];
+  showMenu = false;
+  // isData = false;
+  // sidebar = false;
+  /// items: MenuItem[];
 
   constructor(private sessionService: SessionService) {}
 
   ngOnInit() {
     const options = this.sessionService.getOptions();
     this.optionsHeader = options.filter(x => x.option_type === OptionType.HEADER);
+    console.log(this.optionsHeader);
 
-    this.items = [
+    /*this.items = [
       {
         label: 'File',
         items: [{
@@ -45,13 +46,20 @@ export class HeaderComponent implements OnInit {
           {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
         ]
       }
-    ];
+    ];*/
   }
 
-  hidden() {
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+  haveData(array: ISubOption[]) {
+    return array.length > 0;
+  }
+
+  /*hidden() {
     this.show = !this.show;
   }
   hide() {
     this.sidebar = !this.sidebar;
-  }
+  }*/
 }

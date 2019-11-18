@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router} from '@angular/router';
 import { Observable } from 'rxjs';
-import {UserRolEnum} from '@portal/core/constants';
 import {SessionService} from '@portal/core/services';
 
 @Injectable() // provide-in: se agrega cuando lo necesito en el modulo principal
@@ -19,7 +18,7 @@ export class RoleGuard implements CanActivate {
     const expectedRole = next.data.expectedRole;
     const user = this.sessionService.getUser();
     if (!this.sessionService.isAuthenticated() || !user || user.role !== expectedRole) {
-      this.router.navigateByUrl('/sign-in');
+      this.router.navigateByUrl('/auth/sign-in');
       return false;
     }
     return true;
