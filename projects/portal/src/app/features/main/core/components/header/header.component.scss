@@ -93,7 +93,9 @@ nav .menuBar{
   cursor: pointer;
   position: relative;
 }
-
+.options{
+  display: none;
+}
 @media (max-width: 650px) {
   .Header {
     margin-bottom: 20px;
