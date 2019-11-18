@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sales-list',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesListComponent implements OnInit {
 
+  @Input() rows: string;
+  @Input() totalRecords: string;
+  @Input() pageLinkSize: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.rows = '15';
+    this.totalRecords = '90';
+    this.pageLinkSize = '3';
   }
 
 }
