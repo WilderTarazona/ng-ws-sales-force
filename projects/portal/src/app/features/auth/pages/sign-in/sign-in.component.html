@@ -14,8 +14,8 @@
         </ng-template>
     </div>
       <form action="" class="form" [formGroup]="presenter.authForm" (ngSubmit)="presenter.signIn()" >
-          <input formControlName="username" name="username" type="text" class="form-control rounded-0" text="" required placeholder="Nombre usuario">
-          <input [type]="showPassword ? 'text' : 'password'" formControlName="password" name="password"  text="" class="form-control rounded-0" required placeholder="Contraseña">
+          <input formControlName="username" name="username" type="text" text="" required placeholder="Nombre usuario">
+          <input [type]="showPassword ? 'text' : 'password'" formControlName="password" name="password"  text="" required placeholder="Contraseña">
           <button type="submit" [disabled]="presenter.authForm.invalid" class="btn">Iniciar sesión</button>
         <br/>
         <a href="" class="access">¿No puedes acceder a tu cuenta?</a>

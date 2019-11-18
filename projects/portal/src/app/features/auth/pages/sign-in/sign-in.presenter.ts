@@ -7,6 +7,8 @@ import {ProfileService} from '../../core/graphql/profile.service';
 import {CampaignService} from '../../core/graphql/campaign.service';
 import {OptionService} from '../../core/graphql/option.service';
 import {Router} from '@angular/router';
+import * as jwt_decode from 'jwt-decode';
+
 
 @Injectable()
 export class SignInPresenter {
@@ -104,5 +106,13 @@ export class SignInPresenter {
         this.sessionService.setOptions(res);
         this.router.navigateByUrl('/PortalFFVV');
       });
+  }
+
+  getExternalLogin() {
+    const token = document.location.search.substr(7, 500);
+    const decoded = jwt_decode(token);
+    const detail = new Detail(token, '', decoded.CodigoConsultora, 'SE', decoded.CodigoISO);
+    const sessionModel = new SessionModel('User valid', '200', detail);
+    this.authService.saveLoginData(sessionModel);
   }
 }
