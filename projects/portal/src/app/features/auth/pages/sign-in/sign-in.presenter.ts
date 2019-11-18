@@ -108,12 +108,6 @@ export class SignInPresenter {
       });
   }
 
-  getExternalLogin() {
-    const token = document.location.search.substr(7, 500);
-    const decoded = jwt_decode(token);
-    const detail = new Detail(token, '', decoded.CodigoConsultora, 'SE', decoded.CodigoISO);
-    const sessionModel = new SessionModel('User valid', '200', detail);
-    this.authService.saveLoginData(sessionModel);
   protected homeNavigationbyRole() {
     let navigation = ''; // URL no autorizado
     const role = this.sessionService.getUser().role;
@@ -123,4 +117,12 @@ export class SignInPresenter {
     }
     return navigation;
   }
+
+  // getExternalLogin() {
+  //   const token = document.location.search.substr(7, 500);
+  //   const decoded = jwt_decode(token);
+  //   const detail = new Detail(token, '', decoded.CodigoConsultora, 'SE', decoded.CodigoISO);
+  //   const sessionModel = new SessionModel('User valid', '200', detail);
+  //   this.authService.saveLoginData(sessionModel);
+  // }
 }

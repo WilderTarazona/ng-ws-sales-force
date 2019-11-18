@@ -16,7 +16,7 @@ export class SignInComponent implements OnInit {
 
   ngOnInit() {
     if (document.location.search.length > 0) {
-      this.getExternalLogin();
+     // this.getExternalLogin();
     }
   }
 

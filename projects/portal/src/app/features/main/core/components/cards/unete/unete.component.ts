@@ -21,8 +21,7 @@ export class UneteComponent implements OnInit {
   size: string;
   cars: any[];
 
-  constructor(private sessionService: SessionService,  private uneteService: UneteService) { }
-  constructor() {
+  constructor(private sessionService: SessionService,  private uneteService: UneteService) {
     this.data = true;
     this.sale = true;
     this.roadBright = false;
@@ -37,10 +36,10 @@ export class UneteComponent implements OnInit {
   }
 
   getDetail() {
-    this.user  = this.sessionService.getUser();
-    this.uneteService.getToken(this.user).subscribe(token => {
-      window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;
-    });
+    // this.user  = this.sessionService.getUser();
+    // this.uneteService.getToken(this.user).subscribe(token => {
+    //   window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;
+    // });
   }
 
 }
