@@ -12,6 +12,7 @@ export class SalesComponent implements OnInit {
   sale: boolean;
   roadBright: boolean;
   others: boolean;
+  dop: boolean;
   data: boolean;
   size: string;
 
@@ -20,6 +21,7 @@ export class SalesComponent implements OnInit {
     this.sale = false;
     this.roadBright = false;
     this.others = false;
+    this.dop = true;
   }
 
   ngOnInit() {
