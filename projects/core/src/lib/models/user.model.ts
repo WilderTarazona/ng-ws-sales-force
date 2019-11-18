@@ -1,5 +1,5 @@
 import {IUser} from './user.interface';
-import {IToken} from './token.interface';
+import {IToken, IExternalToken} from './token.interface';
 import {UserRolEnum} from '../constants/rol.enum';
 
 export class UserModel implements IUser {
@@ -7,10 +7,16 @@ export class UserModel implements IUser {
   role: UserRolEnum;
   country: string;
 
-  constructor(token: IToken) {
-    this.userName = token.user_id || null;
-    this.role = token.role as UserRolEnum || null;
-    this.country = token.country || null;
+  constructor(internalToken: IToken, externalToken?: IExternalToken) {
+    if (internalToken) {
+      this.userName = internalToken.user_id || null;
+      this.role = internalToken.role as UserRolEnum || null;
+      this.country = internalToken.country || null;
+    } else if (externalToken) {
+      this.userName = externalToken.CodigoConsultora || null;
+      this.role = UserRolEnum.SOCIA_EMPRESARIA; // externalToken.role as UserRolEnum || null;
+      this.country = externalToken.CodigoISO || null;
+    }
   }
 /*
   get isAdmin(): boolean {

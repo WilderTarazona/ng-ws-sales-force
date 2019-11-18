@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileModel } from '@portal/core/models';
 import { SessionService } from '@portal/core/services';
 import { UneteService } from './unete.service';
 import { environment } from 'projects/portal/src/environments/environment';
+import { ProfileModel } from '@portal/core/models';
 
 @Component({
   selector: 'app-unete',
@@ -13,7 +13,7 @@ export class UneteComponent implements OnInit {
 
   title: string;
   color: string;
-  user: ProfileModel;
+  profile: ProfileModel;
   sale: boolean;
   roadBright: boolean;
   others: boolean;
@@ -36,10 +36,11 @@ export class UneteComponent implements OnInit {
   }
 
   getDetail() {
-    // this.user  = this.sessionService.getUser();
-    // this.uneteService.getToken(this.user).subscribe(token => {
-    //   window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;
-    // });
+    debugger;
+    this.profile  = this.sessionService.getProfile();
+    this.uneteService.getToken(this.profile).subscribe(token => {
+      window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;
+    });
   }
 
 }

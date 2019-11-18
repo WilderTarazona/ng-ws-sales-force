@@ -8,16 +8,19 @@ import { ProfileModel } from '@portal/core/models';
   providedIn: 'root'
 })
 export class UneteService {
-  private url = environment.ENDPOINTS.UNETE_URL_EXTERNAL;
-
   constructor(private http: HttpClient) { }
 
-
-  getToken(user: ProfileModel): Observable<any> {
-
-    const headers: HttpHeaders = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    return this.http.post<any>(this.url, user, { headers: headers });
+  getToken(profile: ProfileModel): Observable<any> {
+    // const headers: HttpHeaders = new HttpHeaders({
+    //   'Content-Type': 'application/json'
+    // });
+    // return this.http.post<any>(this.url, user, { headers: headers });
+    const url = environment.ENDPOINTS.UNETE_URL_EXTERNAL;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    return this.http.post<{type: number, detail: { accessToken: string }}>(url, profile, httpOptions);
   }
 }
