@@ -8,7 +8,6 @@ import {UserTest} from '@portal/core/models';
 })
 export class SalesCatalogComponent implements OnInit {
 
-
   role: string;
   phase: string;
   roadBright: boolean;
@@ -22,6 +21,7 @@ export class SalesCatalogComponent implements OnInit {
     this.role = this.userTest.role;
     this.roadBright = this.userTest.roadBright;
     this.sale = this.userTest.sale;
+    console.log('Sales-Sale-Catalog, es venta :' + this.sale + ' es camino brillante :' + this.roadBright);
   }
 
 }

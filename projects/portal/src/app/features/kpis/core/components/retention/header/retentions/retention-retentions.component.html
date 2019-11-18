@@ -1,0 +1,53 @@
+<ui-card *ngIf="sale">
+  <div class="whiteBack secondCard">
+    <h3>Máxima retención posible</h3>
+    <ul class="listaConsultant">
+      <li>
+        <span class="colorLightBlue">5D5</span>
+        <p>6 Consultoras</p>
+      </li>
+      <hr class="divided" />
+      <li>
+        <span class="colorLightBlue">5D5</span>
+        <p>3 Consultoras</p>
+      </li>
+      <hr class="divided" />
+      <li>
+        <span class="colorLightBlue">5D5</span>
+        <p>4 Consultoras</p>
+      </li>
+      <hr class="divided" />
+      <li>
+        <span class="colorLightBlue">5D5</span>
+        <p>5 Consultoras</p>
+      </li>
+    </ul>
+  </div>
+</ui-card>
+
+<ui-card *ngIf="sale==false">
+    <div class="whiteBack secondCard">
+      <h3>Retención lograda</h3>
+      <ul class="listaConsultant">
+        <li>
+          <span class="colorLightBlue">5D5</span>
+          <p>9 de 9 Consultoras</p>
+        </li>
+        <hr class="divided" />
+        <li>
+          <span class="colorLightBlue">5D5</span>
+          <p>3 de 8 Consultoras</p>
+        </li>
+        <hr class="divided" />
+        <li>
+          <span class="colorLightBlue">5D5</span>
+          <p>7 de 8 Consultoras</p>
+        </li>
+        <hr class="divided" />
+        <li>
+          <span class="colorLightBlue">5D5</span>
+          <p>5 de 12 Consultoras</p>
+        </li>
+      </ul>
+    </div>
+  </ui-card>

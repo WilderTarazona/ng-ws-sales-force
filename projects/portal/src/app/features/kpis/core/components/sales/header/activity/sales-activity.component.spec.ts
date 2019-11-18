@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RetentionComponent } from './retention.component';
+import { SalesActivityComponent } from './sales-activity.component';
 
-describe('RetentionComponent', () => {
-  let component: RetentionComponent;
-  let fixture: ComponentFixture<RetentionComponent>;
+describe('SalesActivityComponent', () => {
+  let component: SalesActivityComponent;
+  let fixture: ComponentFixture<SalesActivityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RetentionComponent ]
+      declarations: [ SalesActivityComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RetentionComponent);
+    fixture = TestBed.createComponent(SalesActivityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

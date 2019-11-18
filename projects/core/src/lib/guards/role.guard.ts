@@ -13,14 +13,15 @@ export class RoleGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.switchHome();
+    return this.switchHome(next);
   }
-  switchHome() {
-    let accesss = false;
-    switch (this.sessionService.getUser().role) { // sonar scanner
-      case UserRolEnum.SOCIA_EMPRESARIA: this.router.navigateByUrl('/PortalFFVV/home-gr'); accesss = false; break;
-      case UserRolEnum.DIRECTOR_VENTA: this.router.navigateByUrl('/PortalFFVV/home-se'); accesss = false; break;
+  switchHome(next: ActivatedRouteSnapshot): boolean {
+    const expectedRole = next.data.expectedRole;
+    const user = this.sessionService.getUser();
+    if (!this.sessionService.isAuthenticated() || !user || user.role !== expectedRole) {
+      this.router.navigateByUrl('/sign-in');
+      return false;
     }
-    return accesss;
+    return true;
   }
 }
