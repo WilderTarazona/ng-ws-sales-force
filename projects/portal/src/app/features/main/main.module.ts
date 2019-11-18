@@ -7,13 +7,15 @@ import { HomeGrComponent } from './pages/home-gr/home-gr.component';
 import { HomeDvComponent } from './pages/home-dv/home-dv.component';
 import {MainCoreModule} from './core/core.module';
 import {MainRoutingModule} from './main-routing.module';
+import { UITitleModule } from '@portal/components/title';
 
 @NgModule({
   declarations: [HomeSeComponent, MainComponent, HomeGzComponent, HomeGrComponent, HomeDvComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
-    MainCoreModule
+    MainCoreModule,
+    UITitleModule  
   ]
 })
 export class MainModule { }
