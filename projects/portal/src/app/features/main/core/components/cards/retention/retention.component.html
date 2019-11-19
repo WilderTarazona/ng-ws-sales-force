@@ -6,10 +6,12 @@
       <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
     </ui-card-header>
     <ng-template [ngIf]="data" [ngIfElse]="loading">
+      <div class="info-card">
         <ui-info>
-          <ui-text text="En C09 puedes lograr" size="md" up></ui-text>
-          <ui-title title="7 Consultoras 6d6" size="lg" down></ui-title>
+          <ui-text text="En C09 puedes lograr" size="md-d" up></ui-text>
+          <ui-title title="7 Consultoras 6d6" size="lg-ex" down></ui-title>
         </ui-info>
+      </div>
         <p-table [value]="cars">
           <ng-template pTemplate="header">
             <tr>
@@ -30,7 +32,7 @@
             </tr>
           </ng-template>
         </p-table>
-        Venta (Todos)
+        <!--Venta (Todos)-->
       </ng-template>
       <ng-template #loading>Loading...</ng-template>
   </ui-card>
@@ -43,10 +45,12 @@
       <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
     </ui-card-header>
     <ng-template [ngIf]="data" [ngIfElse]="loading">
+      <div class="info-card">
         <ui-info>
-          <ui-text text="En C09 puedes lograr" size="md" up></ui-text>
-          <ui-title title="7 Consultoras 6d6" size="lg" down></ui-title>
+          <ui-text text="En C09 puedes lograr" size="md-d" up></ui-text>
+          <ui-title title="7 Consultoras 6d6" size="lg-ex" down></ui-title>
         </ui-info>
+      </div>
         <p-table [value]="cars">
             <ng-template pTemplate="header">
               <tr>
@@ -74,7 +78,7 @@
                 </tr>
             </ng-template>
           </p-table>
-        Facturación (Todos)
+        <!--Facturación (Todos)-->
       </ng-template>
       <ng-template #loading>Loading...</ng-template>
   </ui-card>
