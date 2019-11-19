@@ -31,7 +31,7 @@ export class SignInPresenter {
       password: ['', Validators.required],
       app: ['web'],
       country: ['PE'],
-      role: ['GZ']
+      role: ['SE']
     });
   }
 
