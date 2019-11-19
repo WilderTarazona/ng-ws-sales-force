@@ -7,15 +7,19 @@
         <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
       </ui-card-header>
       <ng-template [ngIf]="data" [ngIfElse]="loading">
-        <ui-info>
-          <ui-text text="Vas recuperando" size="md" up></ui-text>
-          <ui-title title="67.3%" size="lg" down></ui-title>
-        </ui-info>
-        <ui-info>
-          <ui-text text="Ganancia proyectada" size="md" up></ui-text>
-          <ui-title title="$ 20,000" size="lg" down></ui-title>
-        </ui-info>
-        Venta CB Todos (DOP y Otros niveles)
+        <div class="info-card">
+          <ui-info>
+            <ui-text text="Vas recuperando" size="md-d" up></ui-text>
+            <ui-title title="67.3%" size="lg-ex" down></ui-title>
+          </ui-info>
+        </div>
+        <div class="info-card">
+          <ui-info>
+            <ui-text text="Ganancia proyectada" size="md-d" up></ui-text>
+            <ui-title title="$ 20,000" size="lg-ex" down></ui-title>
+          </ui-info>
+        </div>
+        <!--Venta CB Todos (DOP y Otros niveles)-->
       </ng-template>
       <ng-template #loading>Loading...</ng-template>
     </ui-card>
@@ -29,12 +33,12 @@
       </ui-card-header>
       <ng-template [ngIf]="data" [ngIfElse]="loading">
         <ui-info>
-          <ui-text text="Vas recuperando" size="md" up></ui-text>
-          <ui-title title="67.3%" size="lg" down></ui-title>
+          <ui-text text="Vas recuperando" size="md-d" up></ui-text>
+          <ui-title title="67.3%" size="lg-ex" down></ui-title>
         </ui-info>
         <ui-info>
-          <ui-text text="Ganancia proyectada" size="md" up></ui-text>
-          <ui-title title="S/. 14,000" size="lg" down></ui-title>
+          <ui-text text="Ganancia proyectada" size="md-d" up></ui-text>
+          <ui-title title="S/. 14,000" size="lg-ex" down></ui-title>
         </ui-info>
         Facturación CB Todos (DOP y Otros niveles)
       </ng-template>
@@ -51,12 +55,12 @@
     </ui-card-header>
     <ng-template [ngIf]="data" [ngIfElse]="loading">
       <ui-info>
-        <ui-text text="Vas recuperando" size="md" up></ui-text>
-        <ui-title title="67.3%" size="lg" down></ui-title>
+        <ui-text text="Vas recuperando" size="md-d" up></ui-text>
+        <ui-title title="67.3%" size="lg-ex" down></ui-title>
       </ui-info>
       <ui-info>
-        <ui-text text="Ganancia proyectada" size="md" up></ui-text>
-        <ui-title title="S/. 14,000" size="lg" down></ui-title>
+        <ui-text text="Ganancia proyectada" size="md-d" up></ui-text>
+        <ui-title title="S/. 14,000" size="lg-ex" down></ui-title>
       </ui-info>
       Venta y facturación no CB
     </ng-template>
