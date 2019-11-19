@@ -44,7 +44,7 @@ export class HttpHandlerInterceptor implements HttpInterceptor {
           if (err.status === 401) {
             // auto logout if 401 response returned from api
             this.sessionService.clearStorage();
-            this.router.navigateByUrl('/sign-in').then(r => {
+            this.router.navigateByUrl('/auth/sign-in').then(r => {
               if (r) {
                 console.log('Navigation is successful!');
               } else {
