@@ -5,10 +5,10 @@ export interface IOption {
   option_type: string;
   role: string;
   active: string;
-  sub_option: ISubOption;
+  sub_option: ISubOption[];
 }
 
-interface ISubOption {
+export interface ISubOption {
   description: string;
   application: string;
   role: string;

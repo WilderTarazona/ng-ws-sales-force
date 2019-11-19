@@ -75,11 +75,11 @@ export class SessionService {
     localStorage.clear();
   }
   isAuthenticated() {
-    return !localStorage.getItem(this.keyUser) &&
-      !localStorage.getItem(this.keyOauth) &&
-      !localStorage.getItem(this.keyProfile) &&
-      !localStorage.getItem(this.keyCampaign) &&
-      !localStorage.getItem(this.keyOptions);
+    return localStorage.getItem(this.keyUser) &&
+      localStorage.getItem(this.keyOauth) &&
+      localStorage.getItem(this.keyProfile) &&
+      localStorage.getItem(this.keyCampaign) &&
+      localStorage.getItem(this.keyOptions);
   }
 
   protected validateJwt(token) {

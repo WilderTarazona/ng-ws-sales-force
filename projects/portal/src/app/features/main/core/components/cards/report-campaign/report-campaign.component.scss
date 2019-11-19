@@ -1,4 +1,4 @@
-.Button{
+button{
   background: #fff;
   color:#000;
   border-radius: 4px;
@@ -8,17 +8,30 @@
   font-family: Lato,sans-serif;
   font-weight: bold;
   font-size: 14px;
+  margin-top: 20px;
+}
+.title-report{
+  margin-top: 20px;
 }
 .icon-card{
   background-color: rgba(255, 255, 255, 0.24);
   border-radius: 100%;
   padding: 4px;
 }
+.icon-mobile{
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+.info-card{
+  margin-top: 20px;
+}
 
 @media (max-width:650px){
-  .ReportCampaign {
-    .Button{
-      display: none;
-    }
+  .icon-mobile{
+    display: block;
+  }
+  button{
+    display: none;
   }
 }
