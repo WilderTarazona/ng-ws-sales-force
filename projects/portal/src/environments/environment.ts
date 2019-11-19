@@ -11,7 +11,7 @@ export const environment = {
     API_URL: 'https://api-qa.belcorp.biz',
     GRAPH_PROFILE: 'sales_force/graphql',
     GRAPH_KPI: 'kpis/sales_force/graphql',
-    UNETE_URL_EXTERNAL: 'http://localhost:63191/IngresoSistema/IngresoExterno/?token=',
+    UNETE_URL_EXTERNAL: 'https://ffvvmqa.somosbelcorp.com/portal/IngresoSistema/IngresoExterno/?token=',
     UNETE_API_TOKEN: 'sales_force/token',
   },
   OAUTH: {
