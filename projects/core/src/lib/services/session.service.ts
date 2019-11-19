@@ -27,12 +27,19 @@ export class SessionService {
   getOauthToken() {
     return this.decryptItem(this.keyOauth);
   }
-  setUserToken(token: string) {
+  /*setUserToken(token: string) {
     localStorage.setItem(this.keyUser, this.crypto.set(token));
+  }*/
+  setUser(data: UserModel) {
+    localStorage.setItem(this.keyUser, this.crypto.set(JSON.stringify(data)));
   }
-  getUser(): UserModel {
+  /*getUser(): UserModel {
     const decodedToken = this.getDecodeToken(this.keyUser);
     return decodedToken ? new UserModel(decodedToken) : null;
+  }*/
+  getUser(): UserModel {
+    const decrypted = this.decryptItem(this.keyUser);
+    return JSON.parse(decrypted);
   }
   setProfile(data: string) {
     localStorage.setItem(this.keyProfile, this.crypto.set(JSON.stringify(data)));

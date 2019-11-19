@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SignInPresenter} from './sign-in.presenter';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -11,10 +12,15 @@ export class SignInComponent implements OnInit {
   showPassword = false;
 
   constructor(
-    private presenter: SignInPresenter
+    private presenter: SignInPresenter,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
+    const token = this.route.snapshot.paramMap.get('token');
+    if (token) {
+      this.presenter.signInExternal(token);
+    }
   }
 
 }

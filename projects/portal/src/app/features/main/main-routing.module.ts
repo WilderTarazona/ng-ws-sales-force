@@ -5,6 +5,7 @@ import {HomeSeComponent} from './pages/home-se/home-se.component';
 import {HomeGrComponent} from './pages/home-gr/home-gr.component';
 import {RoleGuard} from '@portal/core/guards';
 import {UserRolEnum} from '@portal/core/constants';
+import { HomeGzComponent } from './pages/home-gz/home-gz.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,14 @@ const routes: Routes = [
       {
         path: 'home-gr',
         component: HomeGrComponent
+      },
+      {
+        path: 'home-gz',
+        component: HomeGzComponent
+        // canActivate: [RoleGuard],
+        // data: {
+        //   expectedRole: UserRolEnum.GERENTE_ZONA
+        // }
       }
     ]
   }

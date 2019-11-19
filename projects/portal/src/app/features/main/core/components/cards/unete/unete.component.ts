@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SessionService } from '@portal/core/services';
+import { UneteService } from './unete.service';
+import { environment } from 'projects/portal/src/environments/environment';
+import { ProfileModel } from '@portal/core/models';
 
 @Component({
   selector: 'app-unete',
@@ -9,6 +13,7 @@ export class UneteComponent implements OnInit {
 
   title: string;
   color: string;
+  profile: ProfileModel;
   sale: boolean;
   roadBright: boolean;
   others: boolean;
@@ -16,7 +21,7 @@ export class UneteComponent implements OnInit {
   size: string;
   cars: any[];
 
-  constructor() {
+  constructor(private sessionService: SessionService,  private uneteService: UneteService) {
     this.data = true;
     this.sale = true;
     this.roadBright = false;
@@ -28,6 +33,13 @@ export class UneteComponent implements OnInit {
     this.title = 'Únete';
     this.size = 'xmd';
     this.color = '#000000';
+  }
+
+  redirectUnete() {
+    this.profile  = this.sessionService.getProfile();
+    this.uneteService.getToken(this.profile).subscribe(token => {
+      window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;
+    });
   }
 
 }

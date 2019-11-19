@@ -21,7 +21,10 @@ export const environment = {
   },
   KEYS: {
     CRYPTO: 'byyQOSmbwq6IuCDFkBnipv1j46EJGObf'
-  }
+  },
+  BLACK_LIST: [
+    'http://localhost:63191/IngresoSistema/IngresoExterno/?token='
+  ]
 };
 
 /*

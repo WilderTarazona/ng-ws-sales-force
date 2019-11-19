@@ -66,21 +66,21 @@ export class HttpHandlerInterceptor implements HttpInterceptor {
   }
 
   private addToken(request: HttpRequest<any>, token: string) {
-    let url = '';
-    if (!request.url.includes('i18n')) {
-      url = `${environment.ENDPOINTS.API_URL}/${request.url}`;
+    let url = request.url;
+    if (!environment.BLACK_LIST.includes(url)) {
+      if (!request.url.includes('i18n')) {
+        url = `${environment.ENDPOINTS.API_URL}/${request.url}`;
+      }
+      if (token)  { // && request.url.indexOf('token') === -1
+        return request.clone({
+          url,
+          setHeaders: {
+            'x-access-token': `Bearer ${token}`
+          }
+        });
+      }
     }
-    if (token) { // && request.url.indexOf('token') === -1
-      return request.clone({
-        url,
-        setHeaders: {
-          'x-access-token': `Bearer ${token}`
-        }
-      });
-    }
-    return request.clone({
-      url
-    });
+    return request.clone({ url });
   }
 
   private handle403Error(request: HttpRequest<any>, next: HttpHandler) {
