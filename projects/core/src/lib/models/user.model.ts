@@ -27,17 +27,21 @@ export class UserModel implements IUser {
 */
 }
 
+// Esta clase no forma parte de ninguna lógica de negocio.
+// Es una clase de prueba para hacer tests. Se eliminará.
 export class UserTest {
   public role: string;
   public phase: string;
   public roadBright: boolean;
   public others: boolean;
+  public dop: boolean;
   public sale: boolean;
 
   constructor() {
     this.role = 'SE';
-    this.phase = 'V';
+    this.phase = 'F';
     this.roadBright = false;
+    this.dop = false;
     this.others = false;
     this.isSale();
   }

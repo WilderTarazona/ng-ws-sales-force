@@ -1,35 +1,35 @@
-<ui-card>
-    <div class="sellCard whiteBack ">
-      <ul class="listContent">
-        <li>
-          <h3>% Recuperación C08</h3>
-          <h3 class="colorTextMag">67.3%</h3>
-        </li>
-      </ul>
-      <hr />
-      <ul class="listContent promedy">
-        <li>
-          <h3>Avance de Ganancia C08</h3>
-          <h3 class="colorTextMag">S/ 9,000</h3>
-        </li>
-      </ul>
-      <hr />
-      <ul class="listContent promedy">
-        <li>
-          <h3>Ganancia Total Proyectada</h3>
-          <h3 class="colorTextMag">S/ 14,000</h3>
-        </li>
-      </ul>
-      <div class="tip colorBackTip">
-        <div class="tipIcon">
-          <img src="/images/a-icon-observation.svg" alt="" />
-        </div>
-        <div class="grayText">
-          <p>
-            La ganancia proyectada se calcula en base a la suma de<br />la
-            ganancia por pedidos + ganancia por concursos.
-          </p>
-        </div>
+<ui-card [typeCard]="CardDetail">
+  <div class="sellCard whiteBack ">
+    <ul class="listContent">
+      <li>
+        <ui-title title="% Recuperación C08" size="lg"></ui-title>
+        <ui-title title="67.3%" size="lg" color="#B9007E"></ui-title>
+      </li>
+    </ul>
+    <hr />
+    <ul class="listContent promedy">
+      <li>
+        <ui-title title="Avance de Ganancia C08" size="lg"></ui-title>
+        <ui-title title="S/ 9,000" size="lg" color="#B9007E"></ui-title>
+      </li>
+    </ul>
+    <hr />
+    <ul class="listContent promedy">
+      <li>
+        <ui-title title="Ganancia Total Proyectada" size="lg"></ui-title>
+        <ui-title title="S/ 14,000" size="lg" color="#B9007E"></ui-title>
+      </li>
+    </ul>
+    <div class="tip colorBackTip">
+      <div class="tipIcon">
+        <img src="/images/a-icon-observation.svg" alt="" />
+      </div>
+      <div class="grayText">
+        <p>
+          La ganancia proyectada se calcula en base a la suma de<br />la
+          ganancia por pedidos + ganancia por concursos.
+        </p>
       </div>
     </div>
-  </ui-card>
+  </div>
+</ui-card>

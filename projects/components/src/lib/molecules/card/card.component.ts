@@ -8,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input() backGround: string;
+  @Input() typeCard: string;
   inputStyle: {};
 
   constructor() {
     this.backGround = '#ffffff';
+    this.typeCard = 'Card';
   }
 
   ngOnInit() {

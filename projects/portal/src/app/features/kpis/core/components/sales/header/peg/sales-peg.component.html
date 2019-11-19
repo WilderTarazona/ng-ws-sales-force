@@ -1,26 +1,26 @@
-<ui-card>
-    <div class="activity whiteBack">
-      <div class="headerInfo">
-        <h3>PEGs</h3>
-      </div>
-      <ul class="listContent">
-        <li>
-          <p>PEGs retenidas</p>
-          <span class="colorBlue">100</span>
-        </li>
-        <li>
-          <p>Retención de PEGs</p>
-          <span class="colorBlue">12</span>
-        </li>
-        <li>
-          <p>PEGs por retener</p>
-          <span class="colorBlue">12</span>
-        </li>
-      </ul>
-      <hr />
-      <div class="headerInfo">
-        <h3>Actividad</h3>
-        <h4 class="colorTextMag">Total: <span>85%</span></h4>
-      </div>
+<ui-card [typeCard]="CardDetail">
+  <div class="activity whiteBack">
+    <div class="headerInfo">
+      <ui-title title="PEGs" size="lg" color="#000000"></ui-title>
     </div>
-  </ui-card>
+    <ul class="listContent">
+      <li>
+        <ui-text text="PEGs retenidas" size="md" color="#000000"></ui-text>
+        <ui-title title="8" size="md"></ui-title>
+      </li>
+      <li>
+        <ui-text text="Retención de PEGs" size="md" color="#000000"></ui-text>
+        <ui-title title="80%" size="md"></ui-title>
+      </li>
+      <li>
+        <ui-text text="PEGs por retener" size="md" color="#000000"></ui-text>
+        <ui-title title="4" size="md"></ui-title>
+      </li>
+    </ul>
+    <hr />
+    <div class="headerInfo">
+      <ui-title title="Actividad" size="lg" color="#000000"></ui-title>
+      <ui-title title="Total: 85%" size="xmd" color="#B9007E"></ui-title>
+    </div>
+  </div>
+</ui-card>

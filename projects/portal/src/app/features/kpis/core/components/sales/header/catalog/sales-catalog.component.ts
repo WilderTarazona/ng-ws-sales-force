@@ -11,6 +11,7 @@ export class SalesCatalogComponent implements OnInit {
   role: string;
   phase: string;
   roadBright: boolean;
+  dop: boolean;
   sale: boolean;
   userTest: UserTest;
 
@@ -20,6 +21,7 @@ export class SalesCatalogComponent implements OnInit {
     this.userTest = new UserTest();
     this.role = this.userTest.role;
     this.roadBright = this.userTest.roadBright;
+    this.dop = this.userTest.dop;
     this.sale = this.userTest.sale;
     console.log('Sales-Sale-Catalog, es venta :' + this.sale + ' es camino brillante :' + this.roadBright);
   }
