@@ -12,6 +12,7 @@ import {MenuItem} from 'primeng/api';
 export class HeaderComponent implements OnInit {
   optionsHeader: IOption[];
   showMenu = false;
+  showPerfil = false;
   // isData = false;
   // sidebar = false;
   /// items: MenuItem[];
@@ -51,6 +52,9 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
+  }
+  togglePerfil() {
+    this.showPerfil = !this.showPerfil;
   }
   haveData(array: ISubOption[]) {
     return array.length > 0;

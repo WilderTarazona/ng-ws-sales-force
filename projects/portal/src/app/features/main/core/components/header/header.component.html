@@ -14,25 +14,30 @@
             <i class="icon-arrow-down12"></i>
             <!--<i class="sf-icon-arrow-down"></i>-->
             <ul class="options" *ngIf="showMenu">
-              <li *ngFor="let subMenu of menu.sub_option"><span>{{ subMenu.description }}</span></li>
+              <li *ngFor="let subMenu of menu.sub_option">
+                  <i class="icon-checkbox-unchecked mr-2"></i><span>{{ subMenu.description }}</span></li>
             </ul>
           </ng-container>
         </li>
       </ul>
-    </div>
+    </div> 
     <div class="rightSide">
-      <ul class="options">
-        <li><span>Cobranza</span></li>
-        <li><span>IP Único</span></li>
-        <li><span>Pedidos Web</span></li>
-        <li><span>Bolsa de Pedidos</span></li>
-      </ul>
       <div class="notification">
         <i class="sf-icon-bell"></i>
       </div>
-      <div class="profile">
+      <div class="profile" (click)="togglePerfil()">
         <div class="avatar"></div>
-        <img src="../../../../../../assets/icons/a-icon-arrow-down.svg" alt="">
+        <i class="icon-arrow-down12" style="color: #fff;"></i>
+        <ul class="options-right" *ngIf="showPerfil">
+          <li>
+            <i class="sf-icon-woman mr-2"></i>
+            <span>Mi Perfil</span>
+          </li>
+          <li>
+            <i class="icon-switch2 mr-2"></i>
+            <span>Cerrar Sesión</span>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
