@@ -1,175 +1,176 @@
-<ng-template [ngIf]="roadBright" [ngIfElse]="notRoadBright">
-    <ng-template [ngIf]="sale" [ngIfElse]="billing">
-      <ui-card>
-        <div class="sellCard whiteBack ">
-          <div class="sectionInfo">
-            <div class="orangeLightBack adviceBig">
-              <h4>Venta Catálogo</h4>
-              <h4 class="colorTextMag">$59,012</h4>
-            </div>
-            <ul class="meta">
-              <li>
-                <span>Meta C08</span>
-                <p class="colorBlue">$ 60,012</p>
-              </li>
-              <li>
-                <span>Cumplimiento</span>
-                <p class="colorBlue">80%</p>
-              </li>
-            </ul>
+<ng-template [ngIf]="sale" [ngIfElse]="billing">
+  <ng-template [ngIf]="roadBright" [ngIfElse]="noRoadBright">
+    <ui-card class="catalog" [typeCard]="CardDetail">
+      <div class="sellCard whiteBack ">
+        <div class="sectionInfo">
+          <div class="orangeLightBack adviceBig">
+            <ui-title title="Venta Catálogo" size="lg"></ui-title>
+            <ui-title title="$ 59,012" size="lg" color="#B9007E"></ui-title>
           </div>
-          <hr />
-          <div class="infoFacturacion">
-            <ul class="listContent pedidosValor">
-              <li>
-                <h3>Pedidos</h3>
-                <h3 class="colorTextMag">76 facturados</h3>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <ul class="listContent promedy">
+          <ul class="meta">
             <li>
-              <h3>Promedio por pedido</h3>
-              <h3 class="colorTextMag">$ 789.60</h3>
+              <ui-text text="Meta C08" size="md" color="#454549"></ui-text>
+              <ui-title title="$ 60,012" size="md" color="#2C2654"></ui-title>
+            </li>
+            <li>
+              <ui-text text="Cumplimiento" size="md" color="#454549"></ui-text>
+              <ui-title title="90%" size="md" color="#2C2654"></ui-title>
             </li>
           </ul>
         </div>
-      </ui-card>
-    </ng-template>
-
-    <ng-template #billing>
-      <ui-card>
-        <div class="sellCard whiteBack ">
-          <div class="sectionInfo">
-            <div class="orangeLightBack adviceBig">
-              <h4>Venta Catálogo</h4>
-              <h4 class="colorTextMag">65 facturados</h4>
-            </div>
-            <ul class="meta">
-              <li>
-                <span>Meta C08</span>
-                <p class="colorBlue">$ 60,000</p>
-              </li>
-              <li>
-                <span>Cumplimiento</span>
-                <p class="colorGreen">105%</p>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <div class="infoFacturacion">
-            <ul class="listContent pedidosValor">
-              <li>
-                <h3>Pedidos</h3>
-                <h3 class="colorTextMag">76 facturados</h3>
-              </li>
-              <li>
-                <p>Pedidos de Alto Valor (PAV)</p>
-                <span class="colorBlue">40 pedidos</span>
-              </li>
-              <li>
-                <p>Pedidos de Bajo Valor (PBV)</p>
-                <span class="colorBlue">70 pedidos</span>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <ul class="listContent promedy">
+        <hr />
+        <div class="infoFacturacion">
+          <ul class="listContent pedidosValor">
             <li>
-              <h3>Promedio por pedido</h3>
-              <h3 class="colorTextMag">$ 789.60</h3>
+              <ui-title title="Pedidos" size="lg"></ui-title>
+              <ui-title title="76 facturados" size="lg" color="#B9007E"></ui-title>
             </li>
           </ul>
         </div>
-      </ui-card>
-    </ng-template>
+        <hr />
+        <ul class="listContent promedy">
+          <li>
+            <ui-title title="Promedio por pedido" size="lg"></ui-title>
+            <ui-title title="$ 789.60" size="lg" color="#B9007E"></ui-title>
+          </li>
+        </ul>
+      </div>
+    </ui-card>
   </ng-template>
 
-  <ng-template #notRoadBright>
-    <ng-template [ngIf]="sale" [ngIfElse]="billing">
-      <ui-card class="">
-        <div class="sellCard whiteBack ">
-          <ul class="listContent">
-            <li>
-              <h3>Venta Catálogo</h3>
-              <h3 class="colorTextMag">S/ 20,800</h3>
-            </li>
-          </ul>
-          <hr />
-          <div class="sectionInfo">
-            <div class="orangeLightBack adviceBig">
-              <h4>Pedidos</h4>
-              <h4 class="colorTextMag">65 facturados</h4>
-            </div>
-            <ul class="meta">
-              <li>
-                <span class="colorTextLittle">Meta C08</span>
-                <p class="colorBlue">100 pedidos</p>
-              </li>
-              <li>
-                <span class="colorTextLittle">Cumplimiento</span>
-                <p class="colorBlue">80%</p>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <ul class="listContent promedy">
-            <li>
-              <h3>Promedio por pedido</h3>
-              <h3 class="colorTextMag">S/ 320</h3>
-            </li>
-          </ul>
-        </div>
-      </ui-card>
-    </ng-template>
+  <ng-template #noRoadBright>
+    <ui-card [typeCard]="CardDetail">
+      <div class="sellCard whiteBack ">
+        <ul class="listContent">
+          <li>
+            <ui-title title="Venta Catálogo" size="lg"></ui-title>
+            <ui-title title="S/ 20,800" size="lg" color="#B9007E"></ui-title>
+          </li>
+        </ul>
+        <hr />
+        <div class="sectionInfo">
+          <div class="orangeLightBack adviceBig">
+            <ui-title title="Pedidos" size="lg"></ui-title>
+            <ui-title title="65 facturados" size="lg" color="#B9007E"></ui-title>
 
-    <ng-template #billing>
-      <ui-card>
-        <div class="sellCard whiteBack ">
-          <ul class="listContent">
+          </div>
+          <ul class="meta">
             <li>
-              <h3>Venta Catálogo</h3>
-              <h3 class="colorTextMag">S/ 20,800</h3>
+              <ui-text text="Meta C08" size="md" color="#454549"></ui-text>
+              <ui-title title="100 pedidos" size="md"></ui-title>
             </li>
-          </ul>
-          <hr />
-          <div class="sectionInfo">
-            <div class="orangeLightBack adviceBig">
-              <h4>Pedidos</h4>
-              <h4 class="colorTextMag">65 facturados</h4>
-            </div>
-            <ul class="meta">
-              <li>
-                <span class="colorTextLittle">Meta C08</span>
-                <p class="colorBlue">100 pedidos</p>
-              </li>
-              <li>
-                <span class="colorTextLittle">Cumplimiento</span>
-                <p class="colorBlue">80%</p>
-              </li>
-            </ul>
-          </div>
-          <div class="infoFacturacion">
-            <ul class="listContent pedidosValor">
-              <li>
-                <p>Pedidos de Alto Valor (PAV)</p>
-                <span class="colorBlue">40 pedidos</span>
-              </li>
-              <li>
-                <p>Pedidos de Bajo Valor (PBV)</p>
-                <span class="colorBlue">70 pedidos</span>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <ul class="listContent promedy">
             <li>
-              <h3>Promedio por pedido</h3>
-              <h3 class="colorTextMag">S/ 320</h3>
+              <ui-text text="Cumplimiento" size="md" color="#454549"></ui-text>
+              <ui-title title="80%"></ui-title>
             </li>
           </ul>
         </div>
-      </ui-card>
-    </ng-template>
+        <hr />
+        <ul class="listContent promedy">
+          <li>
+            <ui-title title="Promedio por pedido" size="lg"></ui-title>
+            <ui-title title="S/ 320" size="lg" color="#B9007E"></ui-title>
+          </li>
+        </ul>
+      </div>
+    </ui-card>
   </ng-template>
+</ng-template>
+
+<ng-template #billing>
+  <ng-template [ngIf]="roadBright" [ngIfElse]="noRoadBright">
+    <ui-card [typeCard]="CardDetail">
+      <div class="sellCard whiteBack ">
+        <div class="sectionInfo">
+          <div class="orangeLightBack adviceBig">
+            <ui-title title="Venta Catálogo" size="lg"></ui-title>
+            <ui-title title="$ 72,230" size="lg" color="#B9007E"></ui-title>
+          </div>
+          <ul class="meta">
+            <li>
+              <ui-text text="Meta C08" size="md" color="#454549"></ui-text>
+              <ui-title title="$ 60,000" size="md"></ui-title>
+            </li>
+            <li>
+              <ui-text text="Cumplimiento" size="md" color="#454549"></ui-text>
+              <ui-title title="105%" size="md" color="#38BE62"></ui-title>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="infoFacturacion">
+          <ul class="listContent pedidosValor">
+            <li>
+              <ui-title title="Pedidos" size="lg"></ui-title>
+              <ui-title title="76 facturados" size="lg" color="#B9007E"></ui-title>
+            </li>
+            <li>
+              <ui-text text="Pedidos de Alto Valor (PAV)" size="md" color="#000000"></ui-text>
+              <ui-title title="40 pedidos" size="md"></ui-title>
+            </li>
+            <li>
+                <ui-text text="Pedidos de Bajo Valor (PBV)" size="md" color="#000000"></ui-text>
+                <ui-title title="70 pedidos" size="md"></ui-title>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <ul class="listContent promedy">
+          <li>
+            <ui-title title="Promedio por pedido" size="lg"></ui-title>
+            <ui-title title="$ 789.60" size="lg"  color="#B9007E"></ui-title>
+          </li>
+        </ul>
+      </div>
+    </ui-card>
+  </ng-template>
+
+  <ng-template #noRoadBright>
+    <ui-card [typeCard]="CardDetail">
+      <div class="sellCard whiteBack ">
+        <ul class="listContent">
+          <li>
+            <ui-title title="Venta Catálogo" size="lg"></ui-title>
+            <ui-title title="S/ 25,123" size="lg" color="#B9007E"></ui-title>
+          </li>
+        </ul>
+        <hr />
+        <div class="sectionInfo">
+          <div class="orangeLightBack adviceBig">
+            <ui-title title="Pedidos" size="lg"></ui-title>
+            <ui-title title="110 facturados" size="lg" color="#B9007E"></ui-title>
+          </div>
+          <ul class="meta">
+            <li>
+              <ui-text text="Meta C09" size="md" color="#454549"></ui-text>
+              <ui-title title="100 pedidos" size="md"></ui-title>
+            </li>
+            <li>
+              <ui-text text="Cumplimiento" size="md" color="#454549"></ui-text>
+              <ui-title title="110%" size="md"></ui-title>
+            </li>
+          </ul>
+        </div>
+        <div class="infoFacturacion">
+          <ul class="listContent pedidosValor">
+              <li>
+                  <ui-text text="Pedidos de Alto Valor (PAV)" size="md" color="#000000"></ui-text>
+                  <ui-title title="40 pedidos" size="md"></ui-title>
+                </li>
+                <li>
+                    <ui-text text="Pedidos de Bajo Valor (PBV)" size="md" color="#000000"></ui-text>
+                    <ui-title title="70 pedidos" size="md"></ui-title>
+                </li>
+          </ul>
+        </div>
+        <hr />
+        <ul class="listContent promedy">
+            <li>
+                <ui-title title="Promedio por pedido" size="lg"></ui-title>
+                <ui-title title="S/ 228.40" size="lg"  color="#B9007E"></ui-title>
+              </li>
+        </ul>
+      </div>
+    </ui-card>
+  </ng-template>
+</ng-template>

@@ -1,33 +1,20 @@
-.CycleNews{
-  display: flex;
-  justify-content: space-between;
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
-.firstCard{
-  padding: 24px 20px;
-  border-radius: 4px;
-}
-.advice{
-  padding: 16px 80px;
-}
-.advice p{
-  font-weight: bold;
-}
-.disclaimer{
-  font-size: 12px;
-  margin: 12px auto;
-}
-.secondCard{
-  border-radius: 4px;
-  padding: 24px 20px;
-  width: 70%;
+p{
+  margin: 0px;
 }
 .divided{
   margin: 0px 16px;
 }
-.colorTextMag{
-  color: #b9007e;
+.advice{
+  padding: 16px 15px;
 }
-
+.advice p{
+  font-weight: bold;
+}
 .listaConsultant{
   display: flex;
   margin-top: 24px;
@@ -47,4 +34,8 @@
 }
 .colorLightBlue{
   color:#39bbb1;
+}
+.secondCard{
+  border-radius: 4px;
+  padding: 24px 20px;
 }
