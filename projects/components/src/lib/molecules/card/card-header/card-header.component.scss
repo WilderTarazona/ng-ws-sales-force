@@ -7,10 +7,12 @@
     }
     .iconRight{
         text-align: right;
-        align-self: flex-end;
     }
     .leftSide{
         display: flex;
     }
-
+    .title{
+        display: flex;
+        align-items: center;
+    }
 }

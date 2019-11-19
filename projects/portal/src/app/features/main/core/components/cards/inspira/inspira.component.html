@@ -5,21 +5,23 @@
     <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
   </ui-card-header>
   <ng-template [ngIf]="data" [ngIfElse]="loading">
-    <ui-info>
-      <ui-text text="En C08 tu puesto es" size="md" up></ui-text>
-      <ui-title
-        title="#16 en carrera al Viaje Inspira"
-        size="lg"
-        down
-      ></ui-title>
-    </ui-info>
-    <ui-info>
-      <ui-text text="Tu destino es" size="md" up></ui-text>
-      <ui-title title="Panamá" size="lg" down>
-        <img src="assets/icons/a-icon-salesandorder.svg" alt="" right />
-      </ui-title>
-    </ui-info>
-    Inspira (todos)
+    <div class="info-card">
+      <ui-info>
+        <ui-text text="En C08 tu puesto es" size="md-d" up></ui-text>
+        <ui-title
+          title="#16 en carrera al Viaje Inspira" size="lg-ex" down
+        ></ui-title>
+      </ui-info>
+    </div>
+    <div class="info-card">
+      <ui-info>
+        <ui-text text="Tu destino es" size="md-d" up></ui-text>
+        <ui-title title="Panamá" size="lg-ex" down>
+          <img src="assets/icons/a-icon-salesandorder.svg" alt="" right />
+        </ui-title>
+      </ui-info>
+    </div>
+    <!--Inspira (todos)-->
   </ng-template>
   <ng-template #loading>Loading...</ng-template>
 </ui-card>
