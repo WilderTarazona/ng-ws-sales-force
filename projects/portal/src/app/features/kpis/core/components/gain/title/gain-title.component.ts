@@ -23,7 +23,7 @@ export class GainTitleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title = 'Ciclo de Nuevas';
+    this.title = 'Ganancia y Saldo';
     this.size = 'xmd';
     this.color = '#000000';
   }

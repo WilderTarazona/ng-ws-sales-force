@@ -5,36 +5,41 @@
     <img src="assets/icons/a-icon-arrow-right.svg" alt="" (click)="redirectUnete()" iconRight />
   </ui-card-header>
   <ng-template [ngIf]="data" [ngIfElse]="loading">
-    <ui-info>
-      <ui-text text="En C08 lograste" size="md" up></ui-text>
-      <ui-title title="#80% de Conversión" size="lg" down></ui-title>
-    </ui-info>
-    <ui-text text="En C09 tienes" size="md" up></ui-text>
-    <p-table [value]="cars">
-      <ng-template pTemplate="body" let-car>
-        <tr>
-          <td>EN EVALUACIÓN</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>PRE-APROBADA</td>
-          <td>5</td>
-        </tr>
-      </ng-template>
-    </p-table>
-    <p-table [value]="cars">
-      <ng-template pTemplate="body" let-car>
-        <tr>
-          <td>ING. ANTICIPADOS</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>DÍAS EN ESPERA</td>
-          <td>2</td>
-        </tr>
-      </ng-template>
-    </p-table>
-    Únete (todos)
+    <div class="info-card">
+      <ui-info>
+        <ui-text text="En C08 lograste" size="md-d" up></ui-text>
+        <ui-title title="80% de Conversión" size="lg-ex" down></ui-title>
+      </ui-info>
+    </div>
+    <ui-text text="En C09 tienes" size="md-d" up class=""></ui-text>
+    <div class="ui-g ui-g-nopad">
+      <p-table [value]="cars" class="ui-g-6 ui-g-nopad">
+          <ng-template pTemplate="body" let-car>
+            <tr>
+              <td>EN EVALUACIÓN</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PRE-APROBADA</td>
+              <td>5</td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <p-table [value]="cars" class="ui-g-6 ui-g-nopad">
+          <ng-template pTemplate="body" let-car>
+            <tr>
+              <td>ING. ANTICIPADOS</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DÍAS EN ESPERA</td>
+              <td>2</td>
+            </tr>
+          </ng-template>
+        </p-table>
+    </div>
+    
+    <!--Únete (todos)-->
   </ng-template>
   <ng-template #loading>Loading...</ng-template>
 </ui-card>

@@ -1,13 +1,13 @@
-<ui-card>
-    <div class="goalOrder whiteBack">
-      <div class="headerInfo">
-        <div class="promedy">
-            <div class="promedyMeta">
-                <img src="../../../../../../../../assets/strong.svg" alt="" />
-                <h3>Meta Pedidos C09</h3>
-            </div>
-            <h3 class="colorTextMag">100 Pedidos</h3>
+<ui-card [typeCard]="CardDetail">
+  <div class="goalOrder whiteBack">
+    <div class="headerInfo">
+      <div class="promedy">
+        <div class="promedyMeta">
+          <img src="../../../../../../../../assets/strong.svg" alt="" />
+          <ui-title [title]="goalText" size="lg"></ui-title>
         </div>
+        <ui-title [title]="goal" size="lg" color="#B9007E"></ui-title>
       </div>
     </div>
-  </ui-card>
+  </div>
+</ui-card>

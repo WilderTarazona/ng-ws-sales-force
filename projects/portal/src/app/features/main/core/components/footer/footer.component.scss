@@ -9,7 +9,7 @@
   .Container{
       max-width: 1170px;
       margin: 0 auto;
-      margin-top:40px;
+      margin-top:20px;
       .menuFooter{
         .title{
           font-weight: bold;
@@ -37,6 +37,7 @@
   .FooterMobile{
     padding: 16px 0px;
     font-family: 'Lato';
+    display: none;
   }
   .logoBelcorp{
     padding: 0px 20px;

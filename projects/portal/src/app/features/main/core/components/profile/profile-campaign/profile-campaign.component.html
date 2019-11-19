@@ -1,27 +1,29 @@
 <div class="profileCampaign">
   <ng-template [ngIf]="kindofCampaign" [ngIfElse]="billing">
-    <div class="campaignTotal" >
-        <div class="sale backgr--blue">
-            <p>Venta</p>
-            <span>{{ campaign.current_campaign_short }}</span>
-        </div>
+    <div class="campaignTotal">
+      <div class="sale backgr--blue">
+        <p>Venta</p>
+        <span>{{ campaign.current_campaign_short }}</span>
+      </div>
       <div class="campaign">
-          <p>Tu facturación <br/> inicia en <strong class="color--blue">{{ campaign.billing_days }} días</strong></p>
+        <p>Tu facturación <br /> inicia en <strong class="color--blue">{{ campaign.billing_days }} días</strong></p>
       </div>
     </div>
   </ng-template>
 </div>
 
-<div class="profileCampaign">
-  <ng-template #billing>
-    <div class="campaignTotal" >
-        <div class="sale backgr--pink">
-            <p>FACT.</p>
-            <span>{{ campaign.current_campaign_short }}</span>
-        </div>
+
+<ng-template #billing>
+  <div class="profileCampaign">
+    <div class="campaignTotal">
+      <div class="sale backgr--pink">
+        <p>FACT.</p>
+        <span>{{ campaign.current_campaign_short }}</span>
+      </div>
       <div class="campaign">
-          <p>Estás en el <br/> <strong class="color--pink">Día {{ campaign.billing_days }} </strong> de tu <br/> facturación</p>
+        <p>Estás en el <br /> <strong class="color--pink">Día {{ campaign.billing_days }} </strong> de tu <br />
+          facturación</p>
       </div>
     </div>
-  </ng-template>
-</div>
+  </div>
+</ng-template>

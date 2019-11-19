@@ -1,32 +1,32 @@
-<ui-card>
+<ui-card [typeCard]="CardDetail">
   <div class="activity whiteBack">
     <div class="headerInfo">
-      <h3>Actividad</h3>
-      <h4 class="colorTextMag">Total: <span>85%</span></h4>
+      <ui-title title="Actividad" size="lg" color="#000000"></ui-title>
+      <ui-title title="Total 85%" size="xmd" color="#B9007E"></ui-title>
     </div>
     <ul class="listContent">
       <li>
-        <p>Actividades Finales</p>
-        <span class="colorBlue">100</span>
+        <ui-text text="Actividades Finales" size="md" color="#000000"></ui-text>
+        <ui-title title="100" size="md"></ui-title>
       </li>
       <li>
-        <p>PEGs</p>
-        <span class="colorBlue">12</span>
+        <ui-text text="PEGs" size="md" color="#000000"></ui-text>
+        <ui-title title="12" size="md" color="#E81C36"></ui-title>
       </li>
     </ul>
     <hr />
     <div class="headerInfo">
-      <h3>Retención Activas</h3>
-      <h4 class="colorTextMag">Total: <span>85%</span></h4>
+      <ui-title title="Retención Activas" size="lg" color="#000000"></ui-title>
+      <ui-title title="Total 85%" size="xmd" color="#B9007E"></ui-title>
     </div>
     <ul class="listContent">
       <li>
-        <p class="colorBlue">Actividades Finales C18 - 2018</p>
-        <span class="colorBlue">100 consultoras</span>
+        <ui-text text="Actividades Finales C18 - 2018" size="md"></ui-text>
+        <ui-title title="100 consultoras" size="md"></ui-title>
       </li>
       <li>
-        <p class="colorBlue">Actividades Finales C08 - 2019</p>
-        <span class="colorBlue">80 consultoras</span>
+        <ui-text text="Actividades Finales C08 - 2019" size="md"></ui-text>
+        <ui-title title="80 consultoras" size="md"></ui-title>
       </li>
     </ul>
   </div>

@@ -1,5 +1,5 @@
-<ui-card *ngIf="sale">
-  <div class="whiteBack secondCard">
+<ui-card [typeCard]="CardDetail" *ngIf="sale">
+  <div class="whiteBack">
     <h3>Máxima retención posible</h3>
     <ul class="listaConsultant">
       <li>
@@ -25,28 +25,28 @@
   </div>
 </ui-card>
 
-<ui-card *ngIf="sale==false">
+<ui-card [typeCard]="CardDetail" *ngIf="sale==false">
     <div class="whiteBack secondCard">
-      <h3>Retención lograda</h3>
+      <ui-title title="Retención lograda" size="lg" color="#000000"></ui-title>
       <ul class="listaConsultant">
         <li>
           <span class="colorLightBlue">5D5</span>
-          <p>9 de 9 Consultoras</p>
+          <ui-title title="9 de 9 Consultoras" size="xmd"></ui-title>
         </li>
         <hr class="divided" />
         <li>
           <span class="colorLightBlue">5D5</span>
-          <p>3 de 8 Consultoras</p>
+          <ui-title title="3 de 8 Consultoras" size="xmd"></ui-title>
         </li>
         <hr class="divided" />
         <li>
           <span class="colorLightBlue">5D5</span>
-          <p>7 de 8 Consultoras</p>
+          <ui-title title="7 de 8 Consultoras" size="xmd"></ui-title>
         </li>
         <hr class="divided" />
         <li>
           <span class="colorLightBlue">5D5</span>
-          <p>5 de 12 Consultoras</p>
+          <ui-title title="5 de 12 Consultoras" size="xmd"></ui-title>
         </li>
       </ul>
     </div>

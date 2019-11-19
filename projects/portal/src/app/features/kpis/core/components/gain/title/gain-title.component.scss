@@ -1,0 +1,38 @@
+.headerPage{
+  padding:16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerPage h2{
+  margin: 0px 8px;
+}
+.headerPage .leftSideContainer, .headerPage .rightSideContainer{
+  display: flex;
+  align-items: center;
+}
+.textLink{
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 4px;
+}
+.iconHeader{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  text-align: center;
+  border-radius: 4px;
+}
+.iconHeader img{
+  margin: auto;
+}
+.cardCaption{
+  border-radius:4px;
+  background-color: #fef6e2;
+}
+.whiteBack{
+  background-color: #fff;
+}
+.bodyBack{
+  background-color: #f6f7fb;
+}
