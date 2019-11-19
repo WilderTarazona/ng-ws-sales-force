@@ -34,6 +34,7 @@ import { GainTitleComponent } from "./gain/title/gain-title.component";
 import { GainHeaderComponent } from "./gain/header/gain-header.component";
 import { GainGainsComponent } from "./gain/header/gains/gain-gains.component";
 import { GainRecoveryComponent } from "./gain/header/recovery/gain-recovery.component";
+import { UIInfoModule } from '@portal/components/info';
 
 const COMPONENTS = [
   SalesTitleComponent,
@@ -75,7 +76,8 @@ const COMPONENTS = [
     UITitleModule,
     UIItemDescriptionModule,
     UIItemTitleModule,
-    UIFindModule
+    UIFindModule,
+    UIInfoModule
   ],
   exports: [COMPONENTS]
 })

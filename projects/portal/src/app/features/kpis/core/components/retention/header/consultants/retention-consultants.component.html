@@ -1,11 +1,11 @@
-<ui-card>
+<ui-card [typeCard]="CardDetail">
   <div class="whiteBack firstCard">
     <div class="advice bodyBack">
-      <p>{{ consultants }}</p>
+      <ui-title [title]="consultants" size="lg"></ui-title>
     </div>
     <p class="disclaimer colorTextMag">
       <img src="/images/a-icon-disclaimer.svg" alt="" />
-      Gana hasta S/120 por cada 6D6 que logres retener
+      <ui-text text="Gana hasta S/120 por cada 6D6 que logres retener" size="xsm" color="#B9007E"></ui-text>
     </p>
   </div>
 </ui-card>

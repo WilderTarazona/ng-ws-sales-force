@@ -1,49 +1,69 @@
-<ui-card>
-    <div class="gain whiteBack">
-      <div class="leftSideContainer">
-        <div class="headerInfo">
-          <h3>Ganancia por pedidos</h3>
-          <h4 class="colorTextMag">Total: <span>S/ 1,200</span></h4>
-        </div>
-        <ul class="listContent">
-          <li>
-            <p>Pedidos Alto Valor (PAV)</p>
-            <span class="colorBlue">S/ 400</span>
-          </li>
-          <li>
-            <p>Pedidos Bajo Valor (PBV)</p>
-            <span class="colorBlue">S/ 800</span>
-          </li>
-        </ul>
+<ui-card [typeCard]="CardDetail">
+  <div class="gain whiteBack">
+    <div class="leftSideContainer">
+      <div class="headerInfo">
+        <ui-title
+          title="Ganancia por pedidos"
+          size="lg"
+          color="#000000"
+        ></ui-title>
+        <ui-title title="Total: S/ 1,200" size="xmd" color="#38BE62"></ui-title>
       </div>
-      <hr class="divided" />
-      <div class="rightSideContainer">
-        <div class="headerInfo">
-          <h3>Ganancia por concursos</h3>
-          <h4 class="colorGreen">Total: <span>S/ 600</span></h4>
-        </div>
-        <ul class="listContent">
-          <li>
-            <p>Capitalización</p>
-            <span class="colorBlue">S/ 100</span>
-          </li>
-          <li>
-            <p>Retención 6D6</p>
-            <span class="colorBlue">S/ 240</span>
-          </li>
-          <li>
-            <p>Lanzamiento de Productos</p>
-            <span class="colorBlue">S/ 160</span>
-          </li>
-          <li>
-            <p>Fija Nuevas</p>
-            <span class="colorBlue">S/ 100</span>
-          </li>
-          <li>
-            <p>Cambio de nivel</p>
-            <span class="colorBlue">S/ 160</span>
-          </li>
-        </ul>
-      </div>
+      <ul class="listContent">
+        <li>
+          <ui-text
+            text="Pedidos Alto Valor (PAV)"
+            size="md"
+            color="#000000"
+          ></ui-text>
+          <ui-title title="S/ 400" size="md"></ui-title>
+        </li>
+        <li>
+          <ui-text
+            text="Pedidos Bajo Valor (PBV)"
+            size="md"
+            color="#000000"
+          ></ui-text>
+          <ui-title title="S/ 800" size="md"></ui-title>
+        </li>
+      </ul>
     </div>
-  </ui-card>
+    <hr class="divided" />
+    <div class="rightSideContainer">
+      <div class="headerInfo">
+        <ui-title
+          title="Ganancia por concursos"
+          size="lg"
+          color="#000000"
+        ></ui-title>
+        <ui-title title="Total: S/ 600" size="xmd" color="#38BE62"></ui-title>
+      </div>
+      <ul class="listContent">
+        <li>
+          <ui-text text="Capitalización" size="md" color="#000000"></ui-text>
+          <ui-title title="S/ 100" size="md"></ui-title>
+        </li>
+        <li>
+          <ui-text text="Retención 6D6" size="md" color="#000000"></ui-text>
+          <ui-title title="S/ 240" size="md"></ui-title>
+        </li>
+        <li>
+          <ui-text
+            text="Lanzamiento de Productos"
+            size="md"
+            color="#000000"
+          ></ui-text>
+          <ui-title title="S/ 160" size="md"></ui-title>
+        </li>
+        <li>
+          <ui-text text="Fija Nuevas" size="md" color="#000000"></ui-text>
+          <ui-title title="S/ 100" size="md"></ui-title>
+        </li>
+        <li>
+          <ui-text text="Cambio de nivel" size="md" color="#000000"></ui-text>
+          <ui-title title="S/ 160" size="md"></ui-title>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ui-card>
