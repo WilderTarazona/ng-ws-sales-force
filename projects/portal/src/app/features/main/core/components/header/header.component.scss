@@ -156,21 +156,28 @@ ul{
   }
 }
 
+
 @media (max-width: 650px) {
-  .menuBar{
-    display: none;
-  }
-  .notification{
-    padding: 16px;
-  }
-  .menu-responsive{
-    display: flex;
-    align-items: center;
-    padding: 16px;
-  }
-  .rightSide{
-    .profile{
-      display: none;
+  .container{
+    nav{
+      .menu-responsive{
+        display: flex;
+        align-items: center;
+        padding: 16px;
+      }
+      .leftSide{
+        .menuBar{
+          display: none;
+        }
+        .notification{
+          padding: 16px;
+        }
+      }
+      .rightSide{
+        .profile{
+          display: none;
+        }
+      }
     }
   }
 }

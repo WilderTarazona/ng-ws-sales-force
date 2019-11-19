@@ -22,9 +22,9 @@
     <ul class="listFooter">
       <li *ngFor="let item of optionsFooter">
         <span>{{ item.description }}</span>
-        <i class="icon-plus3"></i>
+        <i class="icon-plus3" (click)="toggleFooter()"></i>
         <!--<img src="images/a-icon-add.svg" alt="">-->
-        <div class="optionFooter">
+        <div class="optionFooter" *ngIf="showFooter">
           <ul>
             <li *ngFor="let subItem of item.sub_option">
               <a href="{{ subItem.url }}">{{ subItem.description }}</a>

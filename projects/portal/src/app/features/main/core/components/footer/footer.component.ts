@@ -11,6 +11,7 @@ import {SessionService} from '@portal/core/services';
 export class FooterComponent implements OnInit {
   optionsFooter: IOption[];
   year = new Date().getFullYear();
+  showFooter = false;
 
   constructor(private sessionService: SessionService) {}
 
@@ -21,5 +22,8 @@ export class FooterComponent implements OnInit {
 
   compareTexts(source: string, target: string) {
     return source.toLocaleLowerCase() === target.toLocaleLowerCase();
+  }
+  toggleFooter() {
+    this.showFooter = !this.showFooter;
   }
 }
