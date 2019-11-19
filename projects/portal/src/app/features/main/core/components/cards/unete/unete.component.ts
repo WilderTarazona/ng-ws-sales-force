@@ -35,8 +35,7 @@ export class UneteComponent implements OnInit {
     this.color = '#000000';
   }
 
-  getDetail() {
-    debugger;
+  redirectUnete() {
     this.profile  = this.sessionService.getProfile();
     this.uneteService.getToken(this.profile).subscribe(token => {
       window.location.href = environment.ENDPOINTS.UNETE_URL_EXTERNAL + token.accessToken;

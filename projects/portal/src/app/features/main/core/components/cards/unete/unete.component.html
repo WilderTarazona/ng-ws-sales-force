@@ -2,7 +2,7 @@
   <ui-card-header>
     <img src="assets/icons/a-icon-add-consultant.svg" alt="" iconLeft class="icon-card"/>
     <ui-title [title]="title" size="xmd" color="color"></ui-title>
-    <img src="assets/icons/a-icon-arrow-right.svg" alt="" iconRight />
+    <img src="assets/icons/a-icon-arrow-right.svg" alt="" (click)="redirectUnete()" iconRight />
   </ui-card-header>
   <ng-template [ngIf]="data" [ngIfElse]="loading">
     <ui-info>
